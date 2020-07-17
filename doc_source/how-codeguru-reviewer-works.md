@@ -1,0 +1,7 @@
+# How CodeGuru Reviewer works<a name="how-codeguru-reviewer-works"></a>
+
+CodeGuru Reviewer uses program analysis combined with machine learning models trained on millions of lines of Java code from the Amazon code base and other sources\. When you enable CodeGuru Reviewer on a repository, CodeGuru Reviewer can find and flag code defects and suggest recommendations to fix those defects\. CodeGuru Reviewer provides actionable recommendations with low false positives and improves its ability to analyze code over time based on user feedback\.
+
+You can enable CodeGuru Reviewer to automatically analyze the pull requests that your developers make\. CodeGuru Reviewer provides recommendations as pull request comments\. These recommendations address instances where the code doesn't adhere to AWS SDK best practices, operations on concurrent data structures might not be thread safe, or resource closure might not be handled properly, among other things\.
+
+ Developers can decide how to incorporate the recommendations from CodeGuru Reviewer and provide feedback to CodeGuru Reviewer about whether the recommendations were useful\. This helps your team ensure code quality and improve their code practices in an organic, interactive way\. At the same time it improves the quality of recommendations CodeGuru Reviewer will provide for your code, making CodeGuru Reviewer increasingly effective in future analyses\.

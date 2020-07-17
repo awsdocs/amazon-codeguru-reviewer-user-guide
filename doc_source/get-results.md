@@ -1,0 +1,8 @@
+# Get recommendations<a name="get-results"></a>
+
+To get recommendations from CodeGuru Reviewer after you associate a repository, use the repository source provider to make a pull request\. CodeGuru Reviewer then provides recommendations as pull request comments in the source provider to improve your code\. The recommendations in these code reviews are about best practices and avoiding potential errors\. For more information about what kinds of recommendations CodeGuru Reviewer provides, see [Recommendations in Amazon CodeGuru Reviewer](recommendations.md)\. You can then choose whether to incorporate the recommendations, and provide feedback about whether the recommendations were helpful\.
+
+The recommendations will show up when a code review is completed on a pull request\. You can view the status of a code review on the **Code reviews** page on the CodeGuru Reviewer console\. While a code review status is **Pending**, it is important to maintain source provider access permissions and keep the pull request open\. The code review status will usually show as **Completed** after about 15 minutes when you refresh the page\. If a code review status is **Failed**, you can view more details on the **Code reviews** page\. Choose the code review that failed, choose **Action**, and then choose **View code review details**\. For more information, see [Working with code reviews](code-reviews.md)\.
+
+**Note**  
+We recommend that you use both CodeGuru Reviewer and traditional peer review processes during the code review stage\. Using a combination of code review processes helps to identify more issues before they reach production\.
