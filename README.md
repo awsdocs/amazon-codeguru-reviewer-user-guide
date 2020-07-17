@@ -1,4 +1,4 @@
-## AWS CodeBuild User Guide
+## Amazon CodeGuru Reviewer User Guide
 
 The open source version of the Amazon CodeGuru Reviewer User Guide. You can submit feedback & requests for changes by submitting issues in this repo or by making proposed changes & submitting a pull request.
 
