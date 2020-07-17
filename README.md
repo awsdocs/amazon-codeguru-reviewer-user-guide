@@ -1,11 +1,7 @@
-## My Project
+## AWS CodeBuild User Guide
 
-TODO: Fill this README out!
+The open source version of the Amazon CodeGuru Reviewer User Guide. You can submit feedback & requests for changes by submitting issues in this repo or by making proposed changes & submitting a pull request.
 
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description on GitHub
 
 ## Security
 
