@@ -1,6 +1,6 @@
 # View code review details<a name="view-code-review-details"></a>
 
-You can view a summary of code review details or a code review details page to get information about a code review's status and generated recommendations\.
+You can view a summary of code review details or a code review details page in Amazon CodeGuru Reviewer\. This allows you to get information about a code review's status and generated recommendations\.
 
 **Topics**
 + [Information in code review details](#information-in-code-review-details)
@@ -13,17 +13,13 @@ You can view a summary of code review details or a code review details page to g
 You might want to use code review details to get more information about a code review, to provide feedback on recommendations in a code review, or to troubleshoot a **Failed** code review status\. 
 
 There are three possible code review statuses: 
-+ **Pending** – CodeGuru Reviewer has received the pull request notification and a code review is scheduled\. Keep the pull request open and the source branch available while CodeGuru Reviewer processes the request\.
-+ **Completed** – CodeGuru Reviewer successfully finished reviewing the pull request source code\.
-+ **Failed** – The code review has failed to finish reviewing the pull request source code\. This could be because of a problem with source code access permissions or a transient exception that occurred\. Two kinds of failure messages can be listed in the status details:
-  + **“CodeGuru Reviewer failed with a transient exception while reviewing the pull request source code\. Your request will be retried\."** 
++ **Pending** – CodeGuru Reviewer has received the pull request notification or the repository analysis request and a code review is scheduled\. Make sure you maintain access permissions to your source branch while CodeGuru Reviewer processes the request\. If the code review is for a pull request, keep the pull request open\.
++ **Completed** – CodeGuru Reviewer successfully finished reviewing the source code\.
++ **Failed** – The code review has failed to finish reviewing the source code\. This could be because of a problem with source code access permissions or a transient exception that occurred:
+  + If the problem is due to source code access permissions, the easiest way to fix it is to disassociate the repository and then associate the repository again\. If the error persists, contact AWS Support\.
+  + If the problem is due to a transient exception, the code review request will be retried\.
 
-    This is due to a transient exception, and the code review request will be retried\.
-  + **“CodeGuru Reviewer was unable to retrieve information necessary to process your request\. This usually indicates a problem with source code access permissions\. If the error persists, contact AWS Support\.”** 
-
-    This is due to source code access permissions, and the easiest way to fix this is to disassociate the repository and then associate the repository again\.
-
-   When you retry the operation, be sure to keep the pull request open and the source branch available while CodeGuru Reviewer processes the request\. 
+   When you retry the operation, be sure to keep relevant pull requests open and the source branch available while CodeGuru Reviewer processes the request\. 
 
 You can view code review details by choosing the name of the code review\. Or select a code review, and then choose **Action**, **View code review details**\. 
 

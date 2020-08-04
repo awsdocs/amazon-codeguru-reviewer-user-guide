@@ -13,6 +13,6 @@ CodeGuru Reviewer is designed to work with Java code repositories in the followi
 + GitHub Enterprise Cloud
 + GitHub Enterprise Server
 
- If you use any of these source providers, you can integrate with CodeGuru Reviewer with just a few steps\. After you associate a repository with CodeGuru Reviewer, you can interact with CodeGuru Reviewer recommendations directly from inside pull requests, without ever having to leave your repository context\.
+ If you use any of these source providers, you can integrate with CodeGuru Reviewer with just a few steps\. After you associate a repository with CodeGuru Reviewer, you can interact with recommendations in the CodeGuru Reviewer console\. For pull request code reviews, you can also see recommendations directly from inside pull requests in your repository context\.
 
 ## <a name="welcome-next-steps"></a>

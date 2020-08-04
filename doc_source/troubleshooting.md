@@ -39,9 +39,8 @@ If you can see your connection displayed there with a status of **Available**, y
 
 This could happen for the following reasons: 
 + CodeGuru Reviewer doesn't have any recommendations\.
-+ There has not been a pull request, so CodeGuru Reviewer has not had a chance to review\.
-+ There are more than the supported maximum of one million lines of code across all files in your pull request\. To process more than one million lines of code, break your pull request into smaller portions and do multiple pull requests, each on less than one million lines of code\.
-+ There was an issue running CodeGuru Reviewer on the pull request\. You should [contact AWS Support](https://aws.amazon.com/premiumsupport/?nc2=h_ql_ce_spt)\.
++ There has not been a pull request or a repository analysis request, so CodeGuru Reviewer has not had a chance to review\.
++ There was an issue running CodeGuru Reviewer on the source code\. You should [contact AWS Support](https://aws.amazon.com/premiumsupport/?nc2=h_ql_ce_spt)\.
 
 ## Why did my association fail?<a name="troubleshooting-status-repo-assoc-failed"></a>
 
@@ -58,14 +57,14 @@ When you have fixed the problem, retry associating the repository\.
 To check the failure status reason of the code review, call the `DescribeCodeReview` API using the AWS CLI or the AWS SDK\. You can also find more information about why the code review failed from the status reason on the console\. To view details about a code review status on the console, navigate to the **Code reviews** page and select the code review that failed\. Then choose **Action**, **View code review details**\. 
 
 Code reviews usually fail for the following reasons: 
-+ Source code access permissions are revoked, and CodeGuru Reviewer was not able to clone the pull request code to review\. In CodeCommit, this usually happens when the customer removes the “codeguru\-reviewer–enabled” repository tag from the repository\. The easiest way to fix this is to disassociate the repository and then associate the repository again\.
-+ The pull request has been closed, and CodeGuru Reviewer was not able to clone the pull request code to review before the pull request closed\. Wait for CodeGuru Reviewer to finish reviewing your pull request before deleting the source branch or closing the pull request\.
++ Source code access permissions are revoked, and CodeGuru Reviewer was not able to clone the source code to review\. In CodeCommit, this usually happens when the customer removes the “codeguru\-reviewer–enabled” repository tag from the repository\. The easiest way to fix this is to disassociate the repository and then associate the repository again\.
++ The pull request being reviewed has been closed, or the branch being reviewed was deleted, and CodeGuru Reviewer was not able to clone the source code to review before that occurred\. Wait for CodeGuru Reviewer to finish reviewing your code before deleting the source branch or closing the pull request\.
 
 ## What if I disagree with the recommendation?<a name="troubleshooting-status-reco-disagree"></a>
 
 Recommendations depend on context and a variety of other factors\. It's possible that some recommendations are not useful\. In these cases, reply to the recommendation in the source provider or the CodeGuru Reviewer console to leave feedback on the recommendation\. 
 
-In CodeCommit, a thumbs down or thumbs up icon is provided next to the comments that you can use to respond to comments made by CodeGuru Reviewer\. In other repository source providers, you can reply to a comment made by CodeGuru Reviewer, and include a thumbs up or thumbs down emoji in your comment to indicate whether it was helpful\. You can also go to the **Code reviews** page on the CodeGuru Reviewer console and select the name of a code review to view details and recommendations from that code review\. There are thumbs up and thumbs down icons there under each recommendation that you can choose to indicate whether the recommendation was helpful\.
+In CodeCommit, a thumbs\-up or thumbs\-down icon is provided next to the comments that you can use to respond to comments made by CodeGuru Reviewer\. In other repository source providers, you can reply to a comment made by CodeGuru Reviewer, and include a thumbs\-up or thumbs\-down emoji in your comment to indicate whether it was helpful\. You can also go to the **Code reviews** page on the CodeGuru Reviewer console and select the name of a code review to view details and recommendations from that code review\. There are thumbs\-up and thumbs\-down icons there under each recommendation that you can choose to indicate whether the recommendation was helpful\.
 
 ## How do I suppress a recommendation?<a name="troubleshooting-status-reco-suppress"></a>
 

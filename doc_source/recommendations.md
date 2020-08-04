@@ -2,7 +2,7 @@
 
 Amazon CodeGuru Reviewer recommends various kinds of fixes in your Java code\. These recommendations are based on common code scenarios and might not apply to all cases\. 
 
-If you don't agree with a recommendation, you can provide feedback by [commenting on the code in the pull requests](provide-feedback.md)\. Any positive or negative feedback can be used to help improve the performance of CodeGuru Reviewer so that recommendations get better over time\.
+If you don't agree with a recommendation, you can [provide feedback](provide-feedback.md) in the CodeGuru Reviewer console or by commenting on the code in the pull requests\. Any positive or negative feedback can be used to help improve the performance of CodeGuru Reviewer so that recommendations get better over time\.
 
 The following kinds of recommendations are provided: 
 + AWS best practices

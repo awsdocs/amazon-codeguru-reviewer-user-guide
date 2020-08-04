@@ -1,6 +1,6 @@
 # Working with code reviews<a name="code-reviews"></a>
 
-When you submit a pull request on a repository that is associated with CodeGuru Reviewer, CodeGuru Reviewer provides recommendations for how to improve your code in code reviews\. Each pull request corresponds to a code review, and each code review can include multiple recommendations that appear as comments on the pull request\. 
+When you submit a pull request or run an analysis on a repository that is associated with Amazon CodeGuru Reviewer, CodeGuru Reviewer provides recommendations for how to improve your code in code reviews\. Each pull request or repository analysis corresponds to a code review, and each code review can include multiple recommendations\. You can see recommendations directly in the CodeGuru Reviewer console **Code reviews** page\. For pull request code reviews, you can also see recommendations as comments on a pull request\. 
 
 You can do the following on the **Code reviews** page in the CodeGuru console: 
 + View all code reviews from the past 90 days
@@ -9,7 +9,7 @@ You can do the following on the **Code reviews** page in the CodeGuru console:
 + View all the recommendations of each code review directly in the console
 + Provide feedback to indicate which recommendations were helpful and which recommendations were not helpful
 
-Your feedback on recommendations is crucial to helping CodeGuru Reviewer improve its recommendations\. You can use the **Code Reviews** page to give feedback on recommendations by choosing the name of the repository and then choosing thumbs\-up or thumbs\-down emoji\.
+Your feedback on recommendations is crucial to helping CodeGuru Reviewer improve its recommendations\. You can use the **Code Reviews** page to give feedback on recommendations by choosing the name of the repository and then choosing thumbs\-up or thumbs\-down icons\.
 
 **Topics**
 + [View all code reviews](view-all-code-reviews.md)
