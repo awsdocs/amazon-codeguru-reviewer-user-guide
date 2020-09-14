@@ -27,11 +27,11 @@ CodeGuru Reviewer looks for lines of code where resource leaks might be occurrin
 
 ## Sensitive information leak prevention<a name="info-leak-prevention"></a>
 
-Sensitive information in code should not be shared with unauthorized parties\. CodeGuru Reviewer looks for lines of code where sensitive information leaks might be occurring, and suggests different ways to handle the data\.
+Sensitive information in code should not be shared with unauthorized parties\. CodeGuru Reviewer looks for lines of code where sensitive information might be leaking, and suggests different ways to handle the data\.
 
 ## Common coding best practices<a name="common-bug-fixes"></a>
 
-CodeGuru Reviewer checks parameters and looks for lines of code that could create bugs\. There are many common errors that cause bugs to happen, such as forgetting to check whether an object is null before setting it, reassigning a synchronized object, or concatenating fields in a string without a separator\. CodeGuru Reviewer can point to the location of those errors and other sources of problems in code\.
+CodeGuru Reviewer checks parameters and looks for lines of code that could create bugs\. There are many common coding errors that cause bugs to happen, such as forgetting to check whether an object is null before setting it, reassigning a synchronized object, or forgetting to initialize a variable along an exception path\. CodeGuru Reviewer can point to the location of those errors and other sources of problems in code\.
 
 ## Refactoring<a name="refactoring"></a>
 

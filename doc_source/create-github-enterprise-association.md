@@ -10,9 +10,9 @@
 
 ## GitHub Enterprise Server repository association prerequisites<a name="create-github-enterprise-association-requirements"></a>
 
- To create a GitHub Enterprise Server repository association, you must have a GitHub Enterprise Server connection in AWS CodeStar connections\. The connection must be in the same AWS account and Region in which you want your code reviews\. For more information, see [Create a connection](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create.html) in the *Developer Tools User Guide*\. 
+ To create a GitHub Enterprise Server repository association, you must have a GitHub Enterprise Server connection in AWS CodeStar connections\. The connection must be in the same AWS account and Region in which you want your code reviews\. For more information, see [Create a connection](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create.html) and [Create a connection to GitHub Enterprise Server](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create-gheserver.html) in the *Developer Tools User Guide*\. 
 
- Your GitHub Enterprise Server connection requires a *host*\. The host represents your GitHub Enterprise Server instance and is what your GitHub Enterprise Server connection connects to\. A host can be an on\-premises server or a Virtual Private Cloud \(VPC\)\. For more information, see [Create a host](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-host-create.html) in the *AWS Developer Tools User Guide*\. 
+ Your GitHub Enterprise Server connection requires a *host*\. The host represents your GitHub Enterprise Server instance and is what your GitHub Enterprise Server connection connects to\. A host can be an on\-premises server or a Virtual Private Cloud \(VPC\)\. For more information, see [Amazon VPC configuration for your host](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create-gheserver-console.html#connections-create-gheserver-prereq) and [Create a host](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-host-create.html) in the *AWS Developer Tools User Guide*\. 
 
 ## Create a GitHub Enterprise Server repository association \(console\)<a name="create-github-enterprise-association-console"></a>
 

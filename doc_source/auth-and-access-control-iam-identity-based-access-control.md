@@ -289,47 +289,10 @@ You can create your own custom IAM policies to allow permissions for CodeGuru Re
 All examples use the US East \(Ohio\) Region \(us\-east\-2\) and contain fictitious account IDs\.
 
  **Examples**
-+ [Example 1: Allow a user to see all recommendations for one code review ](#identity-based-policies-example-1)
-+ [Example 2: Allow a user to view code reviews with a specific ID prefix in a single Region](#identity-based-policies-example-2)
-+ [Example 3: Allow a user to perform CodeGuru Reviewer operations in a single Region](#identity-based-policies-example-3)
-+ [Example 4: Allow read\-only access to code reviews for a user connecting from a specified IP address range ](#identity-based-policies-example-4)
++ [Example 1: Allow a user to perform CodeGuru Reviewer operations in a single Region](#identity-based-policies-example-1)
++ [Example 2: Allow read\-only access to CodeGuru Reviewer operations for a user connecting from a specified IP address range ](#identity-based-policies-example-2)
 
-### Example 1: Allow a user to see all recommendations for one code review<a name="identity-based-policies-example-1"></a>
-
- The following example policy grants permissions for the AWS user with account ID `123456789012` to see a list of all recommendations in their AWS account and Region for the code review with ID *`code-review-id`*\. 
-
-```
-{
-   "Statement": [
-      {
-         "Effect": "Allow",
-         "Action": [
-            "codeguru-reviewer:ListRecommendations"
-         ],
-         "Resource": "arn:aws:codeguru-reviewer:us-east-2:123456789012:code-review:code-review-uuid"
-      }
-   ]
-}
-```
-
-### Example 2: Allow a user to view code reviews with a specific ID prefix in a single Region<a name="identity-based-policies-example-2"></a>
-
-The following shows an example of a permissions policy that allows a user to get information about code reviews only with UUIDs that start with `PullRequest-GITHUB`\.
-
-```
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": "codeguru-reviewer:DescribeCodeReview",
-      "Resource": "arn:aws:codeguru-reviewer:us-east-2:123456789012:code-review:PullRequest-GITHUB*"      
-    }
-  ]
-}
-```
-
-### Example 3: Allow a user to perform CodeGuru Reviewer operations in a single Region<a name="identity-based-policies-example-3"></a>
+### Example 1: Allow a user to perform CodeGuru Reviewer operations in a single Region<a name="identity-based-policies-example-1"></a>
 
 The following permissions policy uses a wildcard character \(`"codeguru-reviewer:*"`\) to allow users to perform all CodeGuru Reviewer actions in the us\-east\-2 Region and not from other AWS Regions\.
 
@@ -351,7 +314,7 @@ The following permissions policy uses a wildcard character \(`"codeguru-reviewer
 }
 ```
 
-### Example 4: Allow read\-only access to code reviews for a user connecting from a specified IP address range<a name="identity-based-policies-example-4"></a>
+### Example 2: Allow read\-only access to CodeGuru Reviewer operations for a user connecting from a specified IP address range<a name="identity-based-policies-example-2"></a>
 
 You can create a policy that only allows users CodeGuru Reviewer read\-only access if their IP address is within a certain IP address range\. The following example grants read\-only CodeGuru Reviewer permissions to users whose IP addresses are within the specified IP address block of 203\.0\.113\.0/24\.
 

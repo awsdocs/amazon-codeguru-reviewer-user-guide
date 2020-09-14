@@ -13,4 +13,5 @@ This documentation helps you understand how to apply the shared responsibility m
 + [Identity and access management in CodeGuru Reviewer](auth-and-access-control.md)
 + [Logging and monitoring in CodeGuru Reviewer](security-incident-response.md)
 + [Compliance validation for CodeGuru Reviewer](codeguru-profilerE-compliance.md)
++ [CodeGuru Reviewer and interface VPC endpoints \(AWS PrivateLink\)](vpc-interface-endpoints.md)
 + [Infrastructure security in CodeGuru Reviewer](infrastructure-security.md)

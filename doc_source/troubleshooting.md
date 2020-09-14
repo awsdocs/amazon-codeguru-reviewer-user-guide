@@ -31,7 +31,7 @@ You can also use the AWS CLI or the AWS SDK\. If you have the code review Amazon
 
 ## Where can I check the status of a third\-party source provider connection?<a name="troubleshooting-status-connection"></a>
 
-You can check the status of a connection using the AWS CLI or AWS SDK\. To do this, call `ListConnections` and filter by the type of source provider, such as `Bitbucket`\. 
+If you are using a source provider that uses AWS CodeStar connections, you can check the status of a connection using the AWS CLI or AWS SDK\. To do this, call `ListConnections` and filter by the type of source provider, such as `Bitbucket`\. 
 
 If you can see your connection displayed there with a status of **Available**, you should be able to return to the CodeGuru console and find your connection\. Try refreshing the display in the console if you haven't already\. Your connection will only display on the CodeGuru console if it has a status of **Available**\. Connections with a status of **Pending** or **Error** will not be displayed\. 
 
