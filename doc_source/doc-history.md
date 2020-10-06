@@ -2,7 +2,7 @@
 
 The following table describes the major updates and new features for the *Amazon CodeGuru Reviewer User Guide*\. We also update the documentation frequently to address the feedback that you send us\. For notification about updates to this documentation, you can subscribe to an RSS feed\.
 
-**Latest documentation update: **September 9, 2020
+**Latest documentation update: **October 5, 2020
 
 | Change | Description | Date | 
 | --- |--- |--- |

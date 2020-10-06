@@ -1,6 +1,9 @@
-# Create a GitHub repository association in Amazon CodeGuru Reviewer<a name="create-github-association"></a>
+# Create a GitHub or GitHub Enterprise Cloud repository association in Amazon CodeGuru Reviewer<a name="create-github-association"></a>
 
- You can create a GitHub repository association using the Amazon CodeGuru Reviewer console\. You cannot create a GitHub repository using the AWS CLI or the CodeGuru Reviewer SDK\. Before you create a GitHub repository association, you must have a GitHub repository\. 
+ You can create a GitHub or GitHub Enterprise Cloud repository association using the Amazon CodeGuru Reviewer console\. You cannot create a GitHub or GitHub Enterprise Cloud repository association using the AWS CLI or the CodeGuru Reviewer SDK\. Before you create a GitHub or GitHub Enterprise Cloud repository association, you must have a GitHub or GitHub Enterprise Cloud repository\. 
+
+**Note**  
+We recommend creating a new GitHub user, for example, *MyCodeGuruUser*, and using that user to provide CodeGuru Reviewer with access to your GitHub repositories\. This ensures that the comments that CodeGuru Reviewer posts are posted on behalf of a unique user\. This will help avoid confusion and make the account more transferable, so that it doesn't belong to a single person who might not always be available to maintain it\. 
 
 **To create a GitHub repository association**
 

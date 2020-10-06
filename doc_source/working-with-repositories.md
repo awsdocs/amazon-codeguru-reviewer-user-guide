@@ -12,6 +12,7 @@ When the pull request notifications and source code access are complete, the sta
 +  AWS CodeCommit 
 +  Bitbucket 
 +  GitHub 
++  GitHub Enterprise Cloud 
 +  GitHub Enterprise Server 
 
 **Note**  
@@ -20,5 +21,5 @@ When the pull request notifications and source code access are complete, the sta
 **Topics**
 + [Create an AWS CodeCommit repository association in Amazon CodeGuru Reviewer](create-codecommit-association.md)
 + [Create a Bitbucket repository association in Amazon CodeGuru Reviewer](create-bitbucket-association.md)
-+ [Create a GitHub repository association in Amazon CodeGuru Reviewer](create-github-association.md)
++ [Create a GitHub or GitHub Enterprise Cloud repository association in Amazon CodeGuru Reviewer](create-github-association.md)
 + [Create a GitHub Enterprise Server repository association in Amazon CodeGuru Reviewer](create-github-enterprise-association.md)

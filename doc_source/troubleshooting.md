@@ -44,9 +44,15 @@ This could happen for the following reasons:
 
 ## Why did my association fail?<a name="troubleshooting-status-repo-assoc-failed"></a>
 
-An association usually fails because of missing permissions\. You can find more information about why the association failed from the status reason\. 
+An association usually fails because of missing permissions\. You can find more information about why the association failed from the status reason\.
 
-You can check the status of a repository in the CodeGuru console\. In the navigation pane, choose **Reviewer**, and then choose **Associated repositories**\. The **Associated repositories** page lists all of the associated repositories and their statuses\. 
+You can check the status of a repository association in the CodeGuru console\. 
+
+1. In the navigation pane, choose **Reviewer**, and then choose **Associated repositories** to navigate to the **Associated repositories** page\. This page lists all the associated repositories and their statuses\.
+
+1. Select the association you want to see status details for\.
+
+1. Go to the **Action** list and choose **View repository details**\. A small window opens with information about the repository and the association status\.
 
 You can also use the AWS CLI or the AWS SDK\. First, call `ListRepositoryAssociations` to find the association ID, then call `DescribeAssociation`\. 
 
