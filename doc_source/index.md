@@ -32,6 +32,8 @@ Amazon's trademarks and trade dress may not be used in
    + [Create a Bitbucket repository association in Amazon CodeGuru Reviewer](create-bitbucket-association.md)
    + [Create a GitHub or GitHub Enterprise Cloud repository association in Amazon CodeGuru Reviewer](create-github-association.md)
    + [Create a GitHub Enterprise Server repository association in Amazon CodeGuru Reviewer](create-github-enterprise-association.md)
+   + [View all repository associations in CodeGuru Reviewer](repository-association-view-all.md)
+   + [Disassociate a repository in CodeGuru Reviewer](disassociate-repository-association.md)
 + [Working with code reviews](code-reviews.md)
    + [About repository analysis and pull request code reviews](repository-analysis-vs-pull-request.md)
    + [Create code reviews in Amazon CodeGuru Reviewer](create-code-reviews.md)
