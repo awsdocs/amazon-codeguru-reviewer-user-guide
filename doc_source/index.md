@@ -55,7 +55,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Monitoring CodeGuru Reviewer with Amazon CloudWatch](monitoring.md)
          + [Monitoring profiling groups with CloudWatch metrics](cloudwatch-metric.md)
          + [Monitoring CodeGuru Reviewer recommendations with CloudWatch alarms](cloudwatch-alarm.md)
-   + [Compliance validation for CodeGuru Reviewer](codeguru-profilerE-compliance.md)
+   + [Compliance validation for CodeGuru Reviewer](codeguru-reviewer-compliance.md)
    + [CodeGuru Reviewer and interface VPC endpoints (AWS PrivateLink)](vpc-interface-endpoints.md)
    + [Infrastructure security in CodeGuru Reviewer](infrastructure-security.md)
 + [Quotas for CodeGuru Reviewer](quotas.md)

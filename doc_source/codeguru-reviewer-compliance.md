@@ -1,4 +1,4 @@
-# Compliance validation for CodeGuru Reviewer<a name="codeguru-profilerE-compliance"></a>
+# Compliance validation for CodeGuru Reviewer<a name="codeguru-reviewer-compliance"></a>
 
 Third\-party auditors assess the security and compliance of Amazon CodeGuru Reviewer as part of multiple AWS compliance programs\. These include SOC, PCI, FedRAMP, HIPAA, and others\.
 
