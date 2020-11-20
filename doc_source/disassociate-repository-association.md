@@ -2,11 +2,10 @@
 
  You can disassociate any associated repository you create\. After you disassociate a repository, Amazon CodeGuru Reviewer no longer has permission to read code in the repository's pull requests and doesn't have access to your repository's source code\. This means that CodeGuru Reviewer does not have permission to perform operations such as cloning or publishing comments in source code\. A disassociated repository does not send pull request notifications to Amazon CodeGuru Reviewer\. You cannot create code reviews of any kind for a disassociated repository\.
 
- Immediately after you choose to disassociate a repository, its status changes to `Disassociating`\. When the disassociation is complete, CodeGuru Reviewer cannot show you the disassociated repository using the console or the AWS CLI\. If you want to review code in your disassociated repository later, you can create a new repository association\. 
+ Immediately after you choose to disassociate a repository, its status changes to `Disassociating`\. If you want to review code in your disassociated repository later, you can create a new repository association\. 
 
-**Topics**
-+ [Disassociate a repository in CodeGuru Reviewer \(console\)](#disassociate-repository-association-console)
-+ [Disassociate a repository in CodeGuru Reviewer \(AWS CLI\)](#disassociate-repository-association-cli)
+**Note**  
+Charges are not incurred for disassociated repositories\.
 
 ## Disassociate a repository in CodeGuru Reviewer \(console\)<a name="disassociate-repository-association-console"></a>
 
@@ -16,27 +15,28 @@
 
 1. In the navigation pane, choose **Repositories**\. 
 
-1.  Choose the radio button next to the repository you want to disassociate\. 
+1. Do one of the following:
+   +  Choose the radio button next to the repository you want to disassociate, then choose **Disassociate repository**\. 
+   +  Choose the association ID of the repository you want to disassociate\. On its **Repository** page, choose **Disassociate repository**\. With this option, you can view details about your repository before you disassociate it\. 
 
-1.  Choose **Action**, then choose **Disassociate repository**\. 
+## Disassociate repository in CodeGuru Reviewer \(AWS CLI\)<a name="disassociate-repository-association-cli"></a>
 
-## Disassociate a repository in CodeGuru Reviewer \(AWS CLI\)<a name="disassociate-repository-association-cli"></a>
+ For information about using the AWS CLI with CodeGuru Reviewer, see the [CodeGuru Reviewer section of the AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/reference/codeguru-reviewer/index.html) 
 
- For information about using the AWS CLI with CodeGuru Reviewer, see the [CodeGuru Reviewer section](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/codeguru-reviewer/index.html) and [disassociate\-repository](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/codeguru-reviewer/disassociate-repository.html) in the *AWS CLI Command Reference*\. 
+**Disassociate a repository association**
 
-**Disassociate a repository**
-
-1. Make sure that you have configured the AWS CLI with the AWS Region where you created the repository association that you want to disassociate\. To verify the Region, run the following command at the command line or terminal and review the information for the default name\. 
+1. Make sure that you have configured the AWS CLI with the AWS Region in which you want to create your code reviews\. To verify the Region, run the following command at the command line or terminal and review the information for the default name\. 
 
    ```
    aws configure
    ```
 
-1. Run the disassociate\-repository command specifying the Amazon Resource Name \(ARN\) of your associated repository\.
+    The default Region name must match the AWS Region for the repository in CodeCommit\. 
+
+1. Run the disassociate\-repository command specifying the Amazon Resource Name \(ARN\) of your associated repository\. 
 
    ```
-   aws codeguru-reviewer disassociate-repository \
-       --association-arn arn:aws:codeguru-reviewer:us-west-2:123456789012:association:repository-association-uuid
+   aws codeguru-reviewer disassociate-repository --association-arn arn:aws:codeguru-reviewer:us-west-2:123456789012:association:repository-association-uuid
    ```
 
 1. If successful, this command outputs a [https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html) object with a state of `Disassociating`\. 
@@ -62,7 +62,7 @@
    aws codeguru-reviewer describe-repository-association --association-arn arn:aws:codeguru-reviewer:us-west-2:123456789012:association:repository-association-uuid
    ```
 
-1.  If successful, the respository association is deleted and the command correctly outputs the following: 
+1.  If successful, the repository association is deleted and the command correctly outputs the following: 
 
    ```
    An error occurred (NotFoundException) when calling the DescribeRepositoryAssociation operation: The requested resource arn:aws:codeguru-reviewer:us-west-2:123456789012:association:repository-association-uuid is not found.

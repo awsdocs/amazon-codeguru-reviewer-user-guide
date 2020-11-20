@@ -15,7 +15,7 @@ When you grant permissions, you decide who is getting the permissions, the resou
 
 ## CodeGuru Reviewer resources and operations<a name="arn-formats"></a>
 
-In Amazon CodeGuru Reviewer, the primary resources are respository associations and code reviews\. In a policy, you use an Amazon Resource Name \(ARN\) to identify the resource the policy applies to\. In the following ARNs, the repository association ID and the code review ID are universally unique identifiers \(UUIDs\)\. For more information, see [Amazon Resource Names \(ARNs\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *Amazon Web Services General Reference*\.
+In Amazon CodeGuru Reviewer, the primary resources are repository associations and code reviews\. In a policy, you use an Amazon Resource Name \(ARN\) to identify the resource the policy applies to\. In the following ARNs, the repository association ID and the code review ID are universally unique identifiers \(UUIDs\)\. For more information, see [Amazon Resource Names \(ARNs\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *Amazon Web Services General Reference*\.
 
 
 | Resource type | ARN format | 

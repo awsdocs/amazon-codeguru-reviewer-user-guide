@@ -25,3 +25,4 @@ When the pull request notifications and source code access are complete, the sta
 + [Create a GitHub Enterprise Server repository association in Amazon CodeGuru Reviewer](create-github-enterprise-association.md)
 + [View all repository associations in CodeGuru Reviewer](repository-association-view-all.md)
 + [Disassociate a repository in CodeGuru Reviewer](disassociate-repository-association.md)
++ [Tagging a repository association in Amazon CodeGuru Reviewer](tag-repository-association.md)

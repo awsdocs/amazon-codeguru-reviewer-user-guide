@@ -1,6 +1,6 @@
 # Create a GitHub Enterprise Server repository association in Amazon CodeGuru Reviewer<a name="create-github-enterprise-association"></a>
 
- You can create a GitHub Enterprise Server repository association using the Amazon CodeGuru Reviewer console, the AWS CLI, or the CodeGuru Reviewer SDK\. Before you create a GitHub Enterprise Server repository association, you must have a GitHub Enterprise Server respository\. 
+ You can create a GitHub Enterprise Server repository association using the Amazon CodeGuru Reviewer console, the AWS CLI, or the CodeGuru Reviewer SDK\. Before you create a GitHub Enterprise Server repository association, you must have a GitHub Enterprise Server repository\. 
 
 **Note**  
 GitHub Enterprise Cloud repositories have a different procedure and different prerequisites\. If you're using GitHub Enterprise Cloud, [follow this procedure instead](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/create-github-association.html)\. 
@@ -15,6 +15,9 @@ GitHub Enterprise Cloud repositories have a different procedure and different pr
 
  To create a GitHub Enterprise Server repository association, you must have a GitHub Enterprise Server connection in AWS CodeStar connections\. The connection must be in the same AWS account and Region in which you want your code reviews\. For more information, see [Create a connection](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create.html) and [Create a connection to GitHub Enterprise Server](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create-gheserver.html) in the *Developer Tools User Guide*\. 
 
+**Important**  
+ AWS CodeStar connections does not support GitHub Enterprise Server version 2\.22\. 
+
  Your GitHub Enterprise Server connection requires a *host*\. The host represents your GitHub Enterprise Server instance and is what your GitHub Enterprise Server connection connects to\. A host can be an on\-premises server or a Virtual Private Cloud \(VPC\)\. For more information, see [Amazon VPC configuration for your host](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create-gheserver-console.html#connections-create-gheserver-prereq) and [Create a host](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-host-create.html) in the *AWS Developer Tools User Guide*\. 
 
 **Important**  
@@ -26,7 +29,7 @@ GitHub Enterprise Cloud repositories have a different procedure and different pr
 
 1. Open the Amazon CodeGuru Reviewer console at [https://console\.aws\.amazon\.com/codeguru/reviewer/home](https://console.aws.amazon.com/codeguru/reviewer/home)\.
 
-1. In the navigation pane, choose **Associated repositories**\. 
+1. In the navigation pane, choose **Repositories**\. 
 
 1. Choose **Associate repository**\. 
 
@@ -34,7 +37,17 @@ GitHub Enterprise Cloud repositories have a different procedure and different pr
 
 1. From **Connect to GitHub Enterprise Server \(with AWS CodeStar Connections\)**, choose the connection you want to use\. If you don't have a connection, choose **Create a GitHub Enterprise Server connection** to create one in the Developer Tools console\. For more information, see [Create a connection](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create.html) in the *AWS Developer Tools User Guide*\. 
 
-1. From **Repository location**, choose the GitHub Enterprise Server repository, then choose **Associate**\. On the **Associated repositories** page, the **Status** is **Associating**\. When the association is complete, the status changes to **Associated** and you can create a pull request or a repository analysis to get recommendations\. Refresh the page to check for the status change\. 
+1. From **Repository location**, choose the GitHub Enterprise Server repository\.
+
+1. \(Optional\) Expand **Tags** and add one or more tags to your repository association\. For more information, see [Tagging a repository association in Amazon CodeGuru Reviewer](tag-repository-association.md)\.
+
+   1. Choose **Add new tag**\.
+
+   1. In **Key**, enter a name for the tag\. You can add an optional value for the tag in **Value**\. 
+
+   1. \(Optional\) To add another tag, choose **Add tag** again\.
+
+1. Choose **Associate**\. On the **Repositories ** page, the **Status** is **Associating**\. When the association is complete, the status changes to **Associated** and you can create a pull request or a repository analysis to get recommendations\. Refresh the page to check for the status change\. 
 
 ## Create a GitHub Enterprise Server repository association \(AWS CLI\)<a name="create-github-enterprise-association-cli"></a>
 

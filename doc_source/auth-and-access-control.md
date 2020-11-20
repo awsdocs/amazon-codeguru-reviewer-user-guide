@@ -8,5 +8,6 @@ AWS Identity and Access Management \(IAM\) is an AWS service that helps an admin
 + [Managing access using policies](security_iam_access-manage.md)
 + [Overview of managing access permissions to your CodeGuru Reviewer resources](security_iam_service-with-iam.md)
 + [Using identity\-based policies for CodeGuru Reviewer](auth-and-access-control-iam-identity-based-access-control.md)
++ [Using tags to control access to Amazon CodeGuru Reviewer associated repositories](auth-and-access-control-using-tags.md)
 + [Amazon CodeGuru Reviewer permissions reference](auth-and-access-control-permissions-reference.md)
 + [Troubleshooting CodeGuru Reviewer identity and access](security_iam_troubleshoot.md)

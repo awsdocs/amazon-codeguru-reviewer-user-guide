@@ -21,13 +21,11 @@ There are three possible code review statuses:
 
    When you retry the operation, be sure to keep relevant pull requests open and the source branch available while CodeGuru Reviewer processes the request\. 
 
-You can view code review details by choosing the name of the code review\. Or select a code review, and then choose **Action**, **View code review details**\. 
-
-![\[Navigating to the Code review details window in the CodeGuru Reviewer console\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/)
+You can view code review details by choosing the name of the code review\.
 
 ## View a summary of code review details<a name="view-details-summary"></a>
 
-If you select the code review and then choose **Action**, **View code review details**, the Code review details window opens, showing the name of the repository, the repository source provider, the status, and details about the status\.
+If you choose the name of the code review, the Code review details window opens, showing the name of the repository, the repository source provider, the status, and details about the status\.
 
 ![\[The Code review details window in the CodeGuru Reviewer console\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/)
 

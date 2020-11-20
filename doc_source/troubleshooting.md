@@ -1,6 +1,6 @@
 # Troubleshooting<a name="troubleshooting"></a>
 
- This section helps you troubleshoot common problems you might encounter when working with Amazon CodeGuru Reviewer\. 
+This section helps you troubleshoot common problems you might encounter when working with Amazon CodeGuru Reviewer\. 
 
 **Topics**
 + [Where can I check the status of a repository association?](#troubleshooting-status-repo-assoc)
@@ -14,12 +14,12 @@
 + [The repository status has been associating for more than 5 minutes\. What should I do?](#troubleshooting-long-associating-time)
 + [The code review status has been Pending for more than 15 minutes\. What should I do?](#troubleshooting-long-code-review-time)
 + [The owner of an associated repository is leaving the company\. How do we maintain access to the repository?](#troubleshooting-losing-repository-owner)
-+ [Can I use the same CodeStar connection to access repositories in two different accounts?](#troubleshooting-multiple-third-party-accounts)
++ [Can I use the same AWS CodeStar connection to access repositories in two different accounts?](#troubleshooting-multiple-third-party-accounts)
 + [I'm trying to connect to my third\-party repositories\. What is the difference between an app installation and a connection? Which one can be used to adjust permissions?](#troubleshooting-connections-and-apps)
 
 ## Where can I check the status of a repository association?<a name="troubleshooting-status-repo-assoc"></a>
 
-You can check the status of a repository in the CodeGuru console\. In the navigation pane, choose **Reviewer**, and then choose **Associated repositories**\. The **Associated repositories** page lists all of the associated repositories and their statuses\. 
+You can check the status of a repository in the CodeGuru console\. In the navigation pane, choose **Reviewer**, and then choose **Repositories **\. The **Repositories** page lists all of the associated repositories and their statuses\. 
 
 You can also use the AWS CLI or the AWS SDK\. First call `ListRepositoryAssociations` to find the association ID, then call `DescribeAssociation`\. 
 
@@ -33,7 +33,7 @@ You can also use the AWS CLI or the AWS SDK\. If you have the code review Amazon
 
 If you are using a source provider that uses AWS CodeStar connections, you can check the status of a connection using the AWS CLI or AWS SDK\. To do this, call `ListConnections` and filter by the type of source provider, such as `Bitbucket`\. 
 
-If you can see your connection displayed there with a status of **Available**, you should be able to return to the CodeGuru console and find your connection\. Try refreshing the display in the console if you haven't already\. Your connection will only display on the CodeGuru console if it has a status of **Available**\. Connections with a status of **Pending** or **Error** will not be displayed\. 
+If you can see your connection displayed there with a status of **Available**, you should be able to return to the CodeGuru console and find your connection\. Try refreshing the display in the console if you haven't already\. Your connection only displays on the CodeGuru console if it has a status of **Available**\. Connections with a status of **Pending** or **Error** are not displayed\. 
 
 ## My repository is in an associated state\. Why don't I see recommendations?<a name="troubleshooting-status-no-recos"></a>
 
@@ -48,7 +48,7 @@ An association usually fails because of missing permissions\. You can find more 
 
 You can check the status of a repository association in the CodeGuru console\. 
 
-1. In the navigation pane, choose **Reviewer**, and then choose **Associated repositories** to navigate to the **Associated repositories** page\. This page lists all the associated repositories and their statuses\.
+1. In the navigation pane, choose **Reviewer**, and then choose **Repositories** to navigate to the **Repositories** page\. This page lists all the associated repositories and their statuses\.
 
 1. Select the association you want to see status details for\.
 
@@ -60,7 +60,7 @@ When you have fixed the problem, retry associating the repository\.
 
 ## Why did my code review fail?<a name="troubleshooting-status-code-review-failed"></a>
 
-To check the failure status reason of the code review, call the `DescribeCodeReview` API using the AWS CLI or the AWS SDK\. You can also find more information about why the code review failed from the status reason on the console\. To view details about a code review status on the console, navigate to the **Code reviews** page and select the code review that failed\. Then choose **Action**, **View code review details**\. 
+To check the failure status reason of the code review, call the `DescribeCodeReview` API using the AWS CLI or the AWS SDK\. You can also find more information about why the code review failed from the status reason on the console\. To view details about a code review status on the console, navigate to the **Code reviews** page and choose the name of the code review that failed\.\. 
 
 Code reviews usually fail for the following reasons: 
 + Source code access permissions are revoked, and CodeGuru Reviewer was not able to clone the source code to review\. In CodeCommit, this usually happens when the customer removes the “codeguru\-reviewer–enabled” repository tag from the repository\. The easiest way to fix this is to disassociate the repository and then associate the repository again\.
@@ -78,17 +78,17 @@ CodeGuru Reviewer doesn't currently support suppressing a recommendation\. Reply
 
 ## The repository status has been associating for more than 5 minutes\. What should I do?<a name="troubleshooting-long-associating-time"></a>
 
-If you have refreshed the page and the status has not changed after five minutes, it's possible that there is a problem with the repository source provider\. To check the status of the repository, on the **Associated repositories** page, choose **Action**, **View repository details**\. 
+If you have refreshed the page and the status has not changed after five minutes, it's possible that there is a problem with the repository source provider\. To check the status of the repository, on the **Repositories** page, choose **Action**, then **View repository details**\. 
 
 ## The code review status has been Pending for more than 15 minutes\. What should I do?<a name="troubleshooting-long-code-review-time"></a>
 
-If you have refreshed the page and the status has not changed after 15 minutes, it's possible that there is a problem with the repository association or an internal failure\. To check the status reason of the code review, call the `DescribeCodeReview` API using the AWS CLI or the AWS SDK\. You can also find more information about why the code review failed from the status reason on the console\. To view details about a code review status on the console, navigate to the **Code reviews** page and select the code review that failed\. Then choose **Action**, **View code review details**\.
+If you have refreshed the page and the status has not changed after 15 minutes, it's possible that there is a problem with the repository association or an internal failure\. To check the status reason of the code review, call the `DescribeCodeReview` API using the AWS CLI or the AWS SDK\. You can also find more information about why the code review failed from the status reason on the console\. To view details about a code review status on the console, navigate to the **Code reviews** page and choose the name of the code review that failed\.
 
 ## The owner of an associated repository is leaving the company\. How do we maintain access to the repository?<a name="troubleshooting-losing-repository-owner"></a>
 
-If the owner of a repository is no longer able to maintain it, you should make another person an administrator\. The new administrator should then disassociate the repository and reassociate it\. Ideally, having a group or email list with administrator privileges will help avoid this problem\.
+If the owner of a repository is no longer able to maintain it, you should make another person an administrator\. The new administrator should then disassociate the repository and reassociate it\. Having a group or email list with administrator privileges helps avoid this problem\.
 
-## Can I use the same CodeStar connection to access repositories in two different accounts?<a name="troubleshooting-multiple-third-party-accounts"></a>
+## Can I use the same AWS CodeStar connection to access repositories in two different accounts?<a name="troubleshooting-multiple-third-party-accounts"></a>
 
 Each connection is associated with one third\-party repository source provider account\. To access repositories in multiple accounts, create separate connections and switch between the accounts to access corresponding repositories\. You can create separate connections for the different accounts from the **Associate repository** page in the console\.
 
