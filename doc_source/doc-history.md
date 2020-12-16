@@ -2,11 +2,14 @@
 
 The following table describes the major updates and new features for the *Amazon CodeGuru Reviewer User Guide*\. We also update the documentation frequently to address the feedback that you send us\. For notification about updates to this documentation, you can subscribe to an RSS feed\.
 
-**Latest documentation update: **November 19, 2020
+**Latest documentation update: **December 4, 2020
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [Updated topics](#doc-history) | CodeGuru Reviewer now supports adding tags to associated repositories\. For more information, see [Tagging a repository association](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/tag-repository-association.html)\.  | November 19, 2020 | 
+| [Updated topics](#doc-history) | CodeGuru Reviewer now supports reviews of Python source code\.  | December 3, 2020 | 
+| [New topic](#doc-history) | CodeGuru Reviewer now supports code reviews that include security analysis for Java applications\. For more information, see [Create code reviews with security analysis in CodeGuru Reviewer](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/code-review-security.html)\.  | December 1, 2020 | 
+| [Updated topic](#doc-history) | CodeGuru Reviewer now supports analysis that helps you improve the quality of your code\. For more information, see [Code quality recommendations](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/recommendations.html#code-quality)\.  | November 25, 2020 | 
+| [New topic](#doc-history) | CodeGuru Reviewer now supports adding tags to associated repositories\. For more information, see [Tagging a repository association](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/tag-repository-association.html)\.  | November 19, 2020 | 
 | [New topic](#doc-history) | Amazon CodeGuru Reviewer now supports AWS PrivateLink\. Use VPC endpoints when calling CodeGuru Reviewer API operations to increase the security\. For more information, see [CodeGuru Reviewer and interface VPC endpoints \(AWS PrivateLink\)](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/vpc-interface-endpoints.html)\.  | September 11, 2020 | 
 | [New topic](#doc-history) | This user guide now includes information about repository analysis scans\. You can now enable CodeGuru Reviewer to provide recommendations on all the code in a branch at any time with repository analysis code reviews\. For more information, see [About repository analysis and pull request scans](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/get-results.html#repository-analysis-vs-pull-request)\. | August 3, 2020 | 
 | [General availability release](#doc-history) | You can now enable CodeGuru Reviewer to provide recommendations on repositories in GitHub Enterprise, as well as Bitbucket, GitHub, and AWS CodeCommit\. More recommendation types are available as well\. | June 29, 2020 | 

@@ -15,6 +15,7 @@ Your feedback on recommendations is crucial to helping CodeGuru Reviewer improve
 **Topics**
 + [About repository analysis and pull request code reviews](repository-analysis-vs-pull-request.md)
 + [Create code reviews in Amazon CodeGuru Reviewer](create-code-reviews.md)
++ [Create code reviews with security analysis in CodeGuru Reviewer](code-review-security.md)
 + [View all code reviews](view-all-code-reviews.md)
 + [View code review details](view-code-review-details.md)
 + [View recommendations and provide feedback](give-feedback-from-code-review-details.md)

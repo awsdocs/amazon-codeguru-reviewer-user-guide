@@ -4,13 +4,13 @@
 
 You work with an actual suboptimal example application in a GitHub repository as a test case\. After you associate the repository with CodeGuru Reviewer, you create a code change and submit a pull request that triggers program analysis\. 
 
-Because the example application contains intential inefficiencies, CodeGuru Reviewer creates recommendations about how to make it better\. You learn how to review the recommendations and then how to provide feedback about them\. Customer feedback from code reviews helps improve CodeGuru Reviewer recommendations over time\. 
+Because the example application contains intentional inefficiencies, CodeGuru Reviewer creates recommendations about how to make it better\. You learn how to review the recommendations and then how to provide feedback about them\. Customer feedback from code reviews helps improve CodeGuru Reviewer recommendations over time\. 
 
  To run this tutorial, you must have a [GitHub](https://github.com/) account\. 
 
 **Note**  
  This tutorial creates code reviews that might result in charges to your AWS account\. For more information, see [Amazon CodeGuru Pricing](https://aws.amazon.com/codeguru/pricing/)\. 
- Do not use the example code in production\. It's intentially problematic and intended for demonstration purposes only\. 
+ Do not use the example code in production\. It's intentionally problematic and intended for demonstration purposes only\. 
 
 ## Step 1: Fork the repository<a name="tutorial-step-1-fork-repo"></a>
 

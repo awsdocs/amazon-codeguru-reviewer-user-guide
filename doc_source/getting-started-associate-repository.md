@@ -1,6 +1,6 @@
 # Step 2: Associate a repository<a name="getting-started-associate-repository"></a>
 
- You must create a repository assocation to grant CodeGuru Reviewer access to read your source code and create notifications on your repository\. The notifications trigger analysis on updated source code every time you create a pull request\. For more information, see [Working with repository associations in Amazon CodeGuru Reviewer](working-with-repositories.md)\.
+ You must create a repository association to grant CodeGuru Reviewer access to read your source code and create notifications on your repository\. The notifications trigger analysis on updated source code every time you create a pull request\. For more information, see [Working with repository associations in Amazon CodeGuru Reviewer](working-with-repositories.md)\.
 
 **Note**  
 The source code reviewed by CodeGuru Reviewer is not stored\. For more information, see [Captured data in CodeGuru Reviewer](data-protection.md#data-captured)\.

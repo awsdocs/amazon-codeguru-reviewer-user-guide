@@ -30,7 +30,7 @@ A user who uses the CodeGuru Reviewer console must have a minimum set of permiss
 
 If you create an IAM policy that is more restrictive than the minimum required permissions, the console won't function as intended\.
 
-The following shows an example of a permissions policy that allows a user to get information about a repository association only in the `us-east-2` Region for account `123456789012` for any repository assocation with a universally unique identifier \(UUID\) that starts with `12345`\.
+The following shows an example of a permissions policy that allows a user to get information about a repository association only in the `us-east-2` Region for account `123456789012` for any repository association with a universally unique identifier \(UUID\) that starts with `12345`\.
 
 ```
 {

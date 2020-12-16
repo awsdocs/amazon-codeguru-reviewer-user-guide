@@ -20,7 +20,7 @@
 
 **View all repository associations**
 
-1. Make sure that you have configured the AWS CLI with the AWS Region that contains the repository assocations you want to view\. Run the following command at the command line or terminal and review or configure the Region for the AWS CLI\. 
+1. Make sure that you have configured the AWS CLI with the AWS Region that contains the repository associations you want to view\. Run the following command at the command line or terminal and review or configure the Region for the AWS CLI\. 
 
    ```
    aws configure
@@ -41,27 +41,27 @@
                "LastUpdatedTimeStamp": 1595886609.616,
                "Name": "test",
                "AssociationId": "0bdac454-f6af-4adf-a625-de4db4b4bca1",
-               "Owner": "iversonic",
+               "Owner": "123456789012",
                "State": "Associated",
-               "AssociationArn": "arn:aws:codeguru-reviewer:us-west-2:544120495673:association:0bdac454-f6af-4adf-a625-de4db4b4bca1",
+               "AssociationArn": "arn:aws:codeguru-reviewer:us-west-2:123456789012:association:0bdac454-f6af-4adf-a625-de4db4b4bca1",
                "ProviderType": "Bitbucket"
            },
            {
                "LastUpdatedTimeStamp": 1595636969.035,
                "Name": "CodeDeploy-CodePipeline-ECS-Tutorial",
                "AssociationId": "eb2f7513-a132-47ad-81dc-bd718468ee1e",
-               "Owner": "544120495673",
+               "Owner": "123456789012",
                "State": "Associated",
-               "AssociationArn": "arn:aws:codeguru-reviewer:us-west-2:544120495673:association:eb2f7513-a132-47ad-81dc-bd718468ee1e",
+               "AssociationArn": "arn:aws:codeguru-reviewer:us-west-2:123456789012:association:eb2f7513-a132-47ad-81dc-bd718468ee1e",
                "ProviderType": "CodeCommit"
            },
            {
                "LastUpdatedTimeStamp": 1595634785.983,
                "Name": "My-ecs-beta-repo",
                "AssociationId": "d79156d7-6297-4b08-ba5a-f05b274e3518",
-               "Owner": "544120495673",
+               "Owner": "123456789012",
                "State": "Associated",
-               "AssociationArn": "arn:aws:codeguru-reviewer:us-west-2:544120495673:association:d79156d7-6297-4b08-ba5a-f05b274e3518",
+               "AssociationArn": "arn:aws:codeguru-reviewer:us-west-2:123456789012:association:d79156d7-6297-4b08-ba5a-f05b274e3518",
                "ProviderType": "CodeCommit"
            }
        ]

@@ -7,6 +7,10 @@
 **Note**  
 Charges are not incurred for disassociated repositories\.
 
+**Topics**
++ [Disassociate a repository in CodeGuru Reviewer \(console\)](#disassociate-repository-association-console)
++ [Disassociate a repository in CodeGuru Reviewer \(AWS CLI\)](#disassociate-repository-association-cli)
+
 ## Disassociate a repository in CodeGuru Reviewer \(console\)<a name="disassociate-repository-association-console"></a>
 
 **To disassociate a repository**
@@ -19,7 +23,7 @@ Charges are not incurred for disassociated repositories\.
    +  Choose the radio button next to the repository you want to disassociate, then choose **Disassociate repository**\. 
    +  Choose the association ID of the repository you want to disassociate\. On its **Repository** page, choose **Disassociate repository**\. With this option, you can view details about your repository before you disassociate it\. 
 
-## Disassociate repository in CodeGuru Reviewer \(AWS CLI\)<a name="disassociate-repository-association-cli"></a>
+## Disassociate a repository in CodeGuru Reviewer \(AWS CLI\)<a name="disassociate-repository-association-cli"></a>
 
  For information about using the AWS CLI with CodeGuru Reviewer, see the [CodeGuru Reviewer section of the AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/reference/codeguru-reviewer/index.html) 
 

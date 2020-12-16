@@ -40,7 +40,7 @@ Follow these steps to use the AWS CLI and the tag\-resource command to add or up
            "Owner": "123456789012",
            "State": "Associated",
            "StateReason": ""Pull Request Notification configuration successful",
-           "AssociationArn": "arn:aws:codeguru-reviewer:us-west-2:544120495673:association:repository-association-uuid"
+           "AssociationArn": "arn:aws:codeguru-reviewer:us-west-2:123456789012:association:repository-association-uuid"
        },
        "Tags": {
            "key3": "value3",

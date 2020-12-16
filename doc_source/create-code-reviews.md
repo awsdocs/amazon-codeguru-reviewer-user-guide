@@ -6,8 +6,9 @@ Amazon CodeGuru Reviewer uses code reviews to provide [different kinds of recomm
 We recommend that you use both CodeGuru Reviewer and traditional peer review processes during the code review stage\. Using a combination of code review processes helps to identify more issues before they reach production\.
 
 There are two different kinds of code reviews that CodeGuru Reviewer can do to provide recommendations\.
-+ *Pull request code reviews* are created automatically when you create a pull request from your repository context on an associated repository\. These code reviews scan the changed code in a pull request
-+ *Repository analysis code reviews* are done when you create a repository analysis code review in the CodeGuru Reviewer console\. These code reviews scan all the code in a specified branch\.
++  *Pull request code reviews* are created automatically when you create a pull request from your repository context on an associated repository\. These code reviews scan the changed code in a pull request 
++ *Repository analysis code reviews* are done when you create a repository analysis code review in the CodeGuru Reviewer console\. These code reviews scan all the code in a specified branch\. 
++ *Repository analysis code reviews that include security analysis* are done when you create an Amazon S3 repository analysis code review in the CodeGuru Reviewer console\. These code reviews scan all the source code and build artifacts that you upload to your S3 repository\. For more information, see [Create code reviews with security analysis in CodeGuru Reviewer](code-review-security.md)\. 
 
 For more information on the difference between pull request and repository analysis code reviews, see [About repository analysis and pull request code reviews](repository-analysis-vs-pull-request.md)\.
 
