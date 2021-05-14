@@ -16,7 +16,7 @@ Because the example application contains intentional inefficiencies, CodeGuru Re
 
  Fork the example application repository so you can create a pull request on it\. 
 
-1.  Log in to GitHub and navigate to the **https://github\.com/aws\-samples/amazon\-codeguru\-reviewer\-sample\-app** example application repository\. 
+1.  Log in to GitHub and navigate to the ** [https://github\.com/aws\-samples/amazon\-codeguru\-reviewer\-sample\-app](https://github.com/aws-samples/amazon-codeguru-reviewer-sample-app)** example application repository\. 
 
 1.  Choose **Fork** to fork the example application to your GitHub account\.   
 ![\[GitHub tutorial step 1: Fork a GitHub repository\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/)![\[GitHub tutorial step 1: Fork a GitHub repository\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/)![\[GitHub tutorial step 1: Fork a GitHub repository\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/)

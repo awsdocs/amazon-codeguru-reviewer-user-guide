@@ -1,7 +1,7 @@
 # Amazon CodeGuru Reviewer User Guide
 
 -----
-*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -34,6 +34,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Create a GitHub Enterprise Server repository association in Amazon CodeGuru Reviewer](create-github-enterprise-association.md)
    + [View all repository associations in CodeGuru Reviewer](repository-association-view-all.md)
    + [Disassociate a repository in CodeGuru Reviewer](disassociate-repository-association.md)
+   + [Encrypting a repository association in Amazon CodeGuru Reviewer](encrypt-repository-association.md)
    + [Tagging a repository association in Amazon CodeGuru Reviewer](tag-repository-association.md)
       + [Add a tag to a CodeGuru Reviewer associated repository](how-to-tag-associated-repositories-add.md)
          + [Add a tag to a CodeGuru Reviewer associated repository (console)](how-to-tag-associated-repository-add-console.md)

@@ -2,7 +2,7 @@
 
 CodeGuru Reviewer is based on program analysis and machine learning models, so it's constantly improving\. To assist in the machine learning process and enhance the experience with CodeGuru Reviewer, you can provide feedback on the recommendations in the **Code reviews** page on the CodeGuru Reviewer console\. You can also provide feedback directly in the pull requests to indicate whether they were helpful to you\. 
 
-Your feedback and comments are shared with CodeGuru Reviewer\. This can help CodeGuru Reviewer to improve its models and become more helpful to you and others in the future\.
+Your feedback and comments are shared with CodeGuru Reviewer\. This can help CodeGuru Reviewer to improve its models and become more helpful to you and others in the future\. When you provide feedback, your code is not shared\. For more information, see [Captured data in CodeGuru Reviewer](data-protection.md#data-captured)\.
 
 **Note**  
 The source code reviewed by CodeGuru Reviewer is not stored\. For more information, see [Captured data in CodeGuru Reviewer](data-protection.md#data-captured)\.
@@ -18,7 +18,7 @@ You can provide feedback for recommendations on pull request or repository analy
 
 ## Provide feedback using pull request comments<a name="provide-feedback-in-pull-requests"></a>
 
-You can also provide feedback for pull request scans by replying to comments in pull requests, without leaving your repository context\. In AWS CodeCommit you can view the recommendations on the **Activity** or **Changes** tab\. A thumbs\-up or thumbs\-down icon is provided next to comments made by CodeGuru Reviewer\. Choose a thumbs\-up icon if the recommendation was helpful and a thumbs\-down icon if it wasn't\. In other repository source providers, you can reply to a comment made by CodeGuru Reviewer, and include either a thumbs\-up or thumbs\-down emoji in your comment to indicate whether it was helpful or not\.
+You can also provide feedback for pull request scans by replying to comments in pull requests, without leaving your repository context\. In AWS CodeCommit you can view the recommendations on the **Activity** or **Changes** tab\. A thumbs\-up or thumbs\-down icon is provided next to comments made by CodeGuru Reviewer\. Choose a thumbs\-up icon if the recommendation was helpful and a thumbs\-down icon if it wasn't\. In other repository source providers, you can reply to a comment made by CodeGuru Reviewer, and include either a thumbs\-up or thumbs\-down emoji in your comment to indicate whether it was helpful or not\. For more information, see [Using emoji](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax#using-emoji) on the GitHub website and [Use symbols, emojis, and special characters](https://support.atlassian.com/confluence-cloud/docs/use-symbols-emojis-and-special-characters/) on the Bitbucket website\.
 
 ![\[Give Feedback in CodeCommit\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/images/guru-feedback-codecommit.png)
 

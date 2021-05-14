@@ -4,7 +4,7 @@
 
 An alarm watches the number of recommendations for one of three CodeGuru Reviewer CloudWatch dimensions that you specify: 
 +  `ProviderType` — View the number of recommendations for a provider type\. You can view the count of recommendations in all repositories in AWS CodeCommit, your Bitbucket account, your GitHub account, or your GitHub Enterprise Server account, over a period of time\. 
-+  `CodeReviewType` — View the number of recommendations a code review types\. The one available code review type is `PullRequest`\. Use it to view the count of recommendations in one pull request\. 
++  `CodeReviewType` — View the number of recommendations for a code review type\. The one available code review type is `PullRequest`\. Use it to view the count of recommendations in one pull request\. 
 +  `RepositoryName` — View the count of recommendations for one repository over a period of time\. 
 
  You set one or more actions that happen when the number of recommendations for a dimension exceeds a count over a number of time periods you choose\. For example, you can specify that an Amazon SNS notification is sent when more than 25 recommendations are generated for a branch in a repository within an hour\. 

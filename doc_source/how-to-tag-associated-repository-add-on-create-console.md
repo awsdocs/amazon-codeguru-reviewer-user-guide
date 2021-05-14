@@ -10,12 +10,12 @@ You can use the Amazon CodeGuru Reviewer console to add one or more tags when yo
    +  [Create a GitHub or GitHub Enterprise Cloud repository association \(console\)](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/create-github-association.html) 
    +  [Create a GitHub Enterprise Server repository association \(console\)](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/create-github-enterprise-association.html#create-github-enterprise-association-console) 
 
-1. When you create your repository association, before you choose **Associate**:
+1. Expand **Tags**\.
 
-   1. Choose **Add new tag**\.
+1. Choose **Add new tag**\.
 
-   1. In **Key**, enter a name for the tag\. You can add an optional value for the tag in **Value**\. 
+1. In **Key**, enter a name for the tag\. You can add an optional value for the tag in **Value**\. 
 
-   1. \(Optional\) To add another tag, choose **Add tag** again\.
+1. \(Optional\) To add another tag, choose **Add tag** again\.
 
 1. Complete the rest of the steps to create your repository association\.

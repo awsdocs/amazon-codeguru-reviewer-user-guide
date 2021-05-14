@@ -1,7 +1,7 @@
 # About repository analysis and pull request code reviews<a name="repository-analysis-vs-pull-request"></a>
 
 There are two different kinds of code reviews that CodeGuru Reviewer can do to provide recommendations\.
-+ *Pull request code reviews* are created automatically when you create a pull request from your repository context on an associated repository\. These code reviews scan the changed code in a pull request
++ *Pull request code reviews* are created automatically when you create a pull request from your repository context on an associated repository\. These code reviews scan the changed code in a pull request\.
 + *Repository analysis code reviews* are done when you create a repository analysis code review in the CodeGuru Reviewer console\. These code reviews scan all the code in a specified branch\.
 
 You can get recommendations in code reviews by using a repository analysis or a pull request\. After you associate a repository, you can choose when to have an entire branch get a code review at any time by using a repository analysis\. Every pull request created on an associated repository also receives a code review\.

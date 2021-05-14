@@ -4,7 +4,7 @@
 
 The recommendations are available for three *dimensions*: 
 +  `ProviderType` — View the number of recommendations for a provider type\. You can view the count of recommendations in all repositories in AWS CodeCommit, your Bitbucket account, your GitHub account, or your GitHub Enterprise Server account, over a period of time\. 
-+  `CodeReviewType` — View the number of recommendations a code review types\. The one available code review type is `PullRequest`\. Use it to view the count of recommendations in one pull request\. 
++  `CodeReviewType` — View the number of recommendations for a code review type\. The one available code review type is `PullRequest`\. Use it to view the count of recommendations in one pull request\. 
 +  `RepositoryName` — View the count of recommendations for one repository over a period of time\. 
 
  You can set a CloudWatch alarm that notifies you when the number of recommendations exceeds a threshold you set\. 

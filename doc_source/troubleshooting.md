@@ -13,7 +13,7 @@ This section helps you troubleshoot common problems you might encounter when wor
 + [How do I suppress a recommendation?](#troubleshooting-status-reco-suppress)
 + [The repository status has been associating for more than 5 minutes\. What should I do?](#troubleshooting-long-associating-time)
 + [The code review status has been Pending for more than 15 minutes\. What should I do?](#troubleshooting-long-code-review-time)
-+ [The owner of an associated repository is leaving the company\. How do we maintain access to the repository?](#troubleshooting-losing-repository-owner)
++ [How do you access a repository if its owner is no longer available?](#troubleshooting-losing-repository-owner)
 + [Can I use the same AWS CodeStar connection to access repositories in two different accounts?](#troubleshooting-multiple-third-party-accounts)
 + [I'm trying to connect to my third\-party repositories\. What is the difference between an app installation and a connection? Which one can be used to adjust permissions?](#troubleshooting-connections-and-apps)
 
@@ -84,7 +84,7 @@ If you have refreshed the page and the status has not changed after five minutes
 
 If you have refreshed the page and the status has not changed after 15 minutes, it's possible that there is a problem with the repository association or an internal failure\. To check the status reason of the code review, call the `DescribeCodeReview` API using the AWS CLI or the AWS SDK\. You can also find more information about why the code review failed from the status reason on the console\. To view details about a code review status on the console, navigate to the **Code reviews** page and choose the name of the code review that failed\.
 
-## The owner of an associated repository is leaving the company\. How do we maintain access to the repository?<a name="troubleshooting-losing-repository-owner"></a>
+## How do you access a repository if its owner is no longer available?<a name="troubleshooting-losing-repository-owner"></a>
 
 If the owner of a repository is no longer able to maintain it, you should make another person an administrator\. The new administrator should then disassociate the repository and reassociate it\. Having a group or email list with administrator privileges helps avoid this problem\.
 

@@ -31,4 +31,12 @@ CodeGuru Reviewer is designed to work with Java and Python code repositories in 
 
  If you use any of these source providers, you can integrate with CodeGuru Reviewer with just a few steps\. After you associate a repository with CodeGuru Reviewer, you can [interact with recommendations in the CodeGuru Reviewer console](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/give-feedback-from-code-review-details.html)\. For pull request code reviews, you can also [see recommendations directly from inside pull requests](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/provide-feedback.html#provide-feedback-in-pull-requests) in your repository context\.
 
+## Accessing CodeGuru Reviewer<a name="accessing_reviewer"></a>
+
+You can access CodeGuru Reviewer using any of the following methods:
++ **Amazon CodeGuru Reviewer console** – [https://console\.aws\.amazon\.com/codeguru/reviewer/](https://console.aws.amazon.com/codeguru/reviewer/)
++ **AWS CLI** – For more information, see [Getting Set Up with the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html) in the *AWS Command Line Interface User Guide*\.
++ **CodeGuru Reviewer API** – For more information, see the [Amazon CodeGuru Reviewer API Reference](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/Welcome.html)\.
++ **AWS SDKs** – For more information, see [Tools for Amazon Web Services](http://aws.amazon.com/tools)\.
+
 ## <a name="welcome-next-steps"></a>

@@ -199,11 +199,11 @@ The `AmazonCodeGuruReviewerReadOnlyAccess` policy contains the following stateme
 
 ### AmazonCodeGuruReviewerServiceRolePolicy<a name="managed-policy-for-codecommit-and-codestar-connections"></a>
 
-`AmazonCodeGuruReviewerServiceRolePolicy` – Grants permission to related resources in CodeCommit, AWS CodeStar connections, and CloudWatch that are required to create repository associations\. 
+`AmazonCodeGuruReviewerServiceRolePolicy` – Grants permission to related resources in CodeCommit, AWS CodeStar connections, Amazon S3, and CloudWatch that are required to create repository associations\. 
 
-For CodeCommit repository associations, the CodeCommit and CloudWatch permissions in this policy are required\. For associations with repositories that are managed by an AWS CodeStar connection, such as Bitbucket, the AWS CodeStar connections permissions are required\.
+For CodeCommit repository associations, the CodeCommit and CloudWatch permissions in this policy are required\. For associations with repositories that are managed by an AWS CodeStar connection, such as Bitbucket, the AWS CodeStar connections permissions are required\. For code reviews with security analysis, the Amazon S3 permissions are required\.
 
- When you create your first association with a CodeCommit or AWS CodeStar connections managed repository, CodeGuru Reviewer adds the `AmazonCodeGuruReviewerServiceRolePolicy` policy to your AWS account\. This policy grants CodeGuru Reviewer access to CodeCommit repositories and AWS CodeStar connections resources in your account that have a `"aws:ResourceTag/codeguru-reviewer"` tag\. When you associate a CodeCommit repository, CodeGuru Reviewer adds this tag to the repository\. When you associate an AWS CodeStar connections managed repository, CodeGuru Reviewer adds this tag to the AWS CodeStar connections resource, if it doesn't already exist\. 
+ When you create your first association with a CodeCommit, Amazon S3, or AWS CodeStar connections managed repository, CodeGuru Reviewer adds the `AmazonCodeGuruReviewerServiceRolePolicy` policy to your AWS account\. This policy grants CodeGuru Reviewer access to CodeCommit repositories, AWS CodeStar connections resources in your account that have a `aws:ResourceTag/codeguru-reviewer` tag\. It also grants access to Amazon S3 buckets that have a prefix that begins with `codeguru-reviewer-`\. When you associate a CodeCommit repository, CodeGuru Reviewer adds this tag to the repository\. When you associate an AWS CodeStar connections managed repository, CodeGuru Reviewer adds this tag to the AWS CodeStar connections resource, if it doesn't already exist\. 
 
 The `AmazonCodeGuruReviewerServiceRolePolicy` policy contains the following statement\.
 
@@ -216,6 +216,7 @@ The `AmazonCodeGuruReviewerServiceRolePolicy` policy contains the following stat
             "Effect": "Allow",
             "Action": [
                 "codecommit:GetRepository",
+                "codecommit:GetBranch",
                 "codecommit:DescribePullRequestEvents",
                 "codecommit:GetCommentsForPullRequest",
                 "codecommit:GetDifferences",
@@ -257,7 +258,7 @@ The `AmazonCodeGuruReviewerServiceRolePolicy` policy contains the following stat
                     ]
                 },
                 "Null": {
-                    "aws:ResourceTag/codeguru-reviewer ;": "false"
+                    "aws:ResourceTag/codeguru-reviewer": "false"
                 }
             }
         },
@@ -274,6 +275,17 @@ The `AmazonCodeGuruReviewerServiceRolePolicy` policy contains the following stat
                     "events:ManagedBy": "codeguru-reviewer.amazonaws.com"
                 }
             }
+        },
+        {
+            "Sid": "AllowGuruS3GetObject",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::codeguru-reviewer-*",
+                "arn:aws:s3:::codeguru-reviewer-*/*"
+            ]
         }
     ]
 }

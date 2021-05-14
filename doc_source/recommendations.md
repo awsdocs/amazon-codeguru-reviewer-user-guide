@@ -13,7 +13,7 @@ The following kinds of recommendations are provided:
 + Common coding best practices
 + Refactoring
 + Input validation
-+ Code quality
++ Code maintainability detector
 
 ## AWS best practices<a name="best-practices"></a>
 
@@ -47,7 +47,7 @@ CodeGuru Reviewer looks for lines of code that appear to be duplicated or simila
 
 It's important to detect unexpected input that arrives at a computation, and to apply appropriate validation before the computation starts\. Input validation is an important layer of defense against unintentional errors, such as client component changes, and malicious attacks, such as code injection or denial of service\. CodeGuru Reviewer looks for lines of code that process input data and suggests additional validation where it's needed\.
 
-## Code quality<a name="code-quality"></a>
+## Code maintainability detector<a name="code-quality"></a>
 
  CodeGuru Reviewer code analysis suggests how you can improve the quality of your code\. The following are some of the code quality issues that it finds and about which it informs you\. 
 

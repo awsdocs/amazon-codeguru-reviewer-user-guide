@@ -34,6 +34,8 @@ To get recommendations on all the code in a branch, associate the repository wit
 
 To view the recommendations, navigate to the **Code reviews** page in the console and choose the name of the code review to view the detailed code review page\. If you do not see the code review right away, try refreshing the page\. For more information, see [View code review details](view-code-review-details.md)\.
 
+ If a repository contains Java and Python files, then CodeGuru Reviewer generates recommendations for the language for which there are more files\. For example, if there are five Java files and ten Python files in an associated repository, then recommendations for the Python code are generated and no recommendations for the Java code are generated\. If the number of Java and Python files is the same, then only Java recommendations are generated\. 
+
 ## Get recommendations using pull requests<a name="get-pull-request-scan"></a>
 
 To get recommendations from CodeGuru Reviewer after you associate a repository, use the repository source provider to make a pull request\. CodeGuru Reviewer then provides recommendations as pull request comments in the source provider to improve your code\. 

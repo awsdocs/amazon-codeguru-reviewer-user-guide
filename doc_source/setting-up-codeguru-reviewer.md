@@ -4,7 +4,7 @@ Complete the tasks in this section to set up Amazon CodeGuru Reviewer for the fi
 
 You should know the following about Amazon Web Services \(AWS\): 
 + When you sign up for AWS, your AWS account automatically has access to all services in AWS, including CodeGuru Reviewer\. However, you are charged only for the services that you use\. 
-+ With CodeGuru Reviewer, you pay only for analysis of lines of code that change or are new in pull requests\. For more information, see [Amazon CodeGuru pricing](https://aws.amazon.com/codeguru/pricing/)\. 
++ With CodeGuru Reviewer, you pay for the size of each of your associated repositories measured in lines of code\. For more information, see [Amazon CodeGuru pricing](https://aws.amazon.com/codeguru/pricing/)\.
 
 **Topics**
 + [Sign up for AWS](get-set-up-sign-up-for-aws.md)

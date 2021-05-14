@@ -1,6 +1,6 @@
 # Create a Bitbucket repository association in Amazon CodeGuru Reviewer<a name="create-bitbucket-association"></a>
 
-You can create an Bitbucket repository association using the Amazon CodeGuru Reviewer console, the AWS CLI, or the CodeGuru Reviewer SDK\. Before you create a Bitbucket repository association, you must have a Bitbucket repository and you must create a connection to it using the Developer Tools console\. For more information, see [Create a connection](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create.html) in the *Developer Tools User Guide*\. For information about creating a Bitbucket repository, see [Create a Git repository](https://support.atlassian.com/bitbucket-cloud/docs/create-a-git-repository/) on the Bitbucket website\. 
+You can create a Bitbucket repository association using the Amazon CodeGuru Reviewer console, the AWS CLI, or the CodeGuru Reviewer SDK\. Before you create a Bitbucket repository association, you must have a Bitbucket repository and you must create a connection to it using the Developer Tools console\. For more information, see [Create a connection](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create.html) in the *Developer Tools User Guide*\. For information about creating a Bitbucket repository, see [Create a Git repository](https://support.atlassian.com/bitbucket-cloud/docs/create-a-git-repository/) on the Bitbucket website\. 
 
 **Topics**
 + [Create a Bitbucket repository association \(console\)](#create-bitbucket-association-console)
@@ -25,7 +25,15 @@ You can create an Bitbucket repository association using the Amazon CodeGuru Rev
 
 1. From **Repository location**, choose your Bitbucket repository\.
 
-1. \(Optional\) Expand **Tags** and add one or more tags to your repository association\. For more information, see [Tagging a repository association in Amazon CodeGuru Reviewer](tag-repository-association.md)\.
+1. \(Optional\) Expand **Encryption key \- optional** to use your own AWS Key Management Service key \(KMS key\) to encrypt your associated repository\. For more information, see [Encrypting a repository association in Amazon CodeGuru Reviewer](encrypt-repository-association.md)\.
+
+   1. Select **Customize encryption settings \(advanced\)**\.
+
+   1. Do one of the following: 
+      + If you already have a KMS key that you manage, enter its Amazon Resource Name \(ARN\)\. For information about finding the ARN of your key using the console, see [Finding the key ID and ARN](https://docs.aws.amazon.com/kms/latest/developerguide/find-cmk-id-arn.html) in the *AWS Key Management Service Developer Guide*\.
+      + If you want to create a new KMS key, choose **Create an AWS KMS key** and follow the steps in the AWS KMS console\. For more information, see [Creating keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.
+
+1. \(Optional\) Expand **Tags** to add one or more tags to your repository association\. For more information, see [Tagging a repository association in Amazon CodeGuru Reviewer](tag-repository-association.md)\.
 
    1. Choose **Add new tag**\.
 
@@ -102,4 +110,4 @@ You can create an Bitbucket repository association using the Amazon CodeGuru Rev
 
 ## Create a Bitbucket repository association \(AWS SDKs\)<a name="create-bitbucket-association-sdk"></a>
 
- To create a Bitbucket repository association with the AWS SDKs, use the `AssociateRepository` API\. For more information, see [AssociateRepository](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_AssociateRepository.html) in the *Amazon CodeGuru Reviewer API Reference*\. 
+To create a Bitbucket repository association with the AWS SDKs, use the `AssociateRepository` API\. For more information, see [AssociateRepository](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_AssociateRepository.html) in the *Amazon CodeGuru Reviewer API Reference*\. 

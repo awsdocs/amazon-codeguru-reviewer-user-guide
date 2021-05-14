@@ -1,6 +1,6 @@
 # Create an AWS CodeCommit repository association in Amazon CodeGuru Reviewer<a name="create-codecommit-association"></a>
 
- You can create an AWS CodeCommit repository association using the Amazon CodeGuru Reviewer console, the AWS CodeCommit console, the AWS CLI, or the CodeGuru Reviewer SDK\. Before you create a CodeCommit repository association, you must have a CodeCommit repository in the same AWS account and Region in which you want your CodeGuru Reviewer code reviews\. For more information, see [Create an AWS CodeCommit repository](https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-create-repository.html) in the *AWS CodeCommit User Guide*\. 
+You can create an AWS CodeCommit repository association using the Amazon CodeGuru Reviewer console, the AWS CodeCommit console, the AWS CLI, or the CodeGuru Reviewer SDK\. Before you create a CodeCommit repository association, you must have a CodeCommit repository in the same AWS account and Region in which you want your CodeGuru Reviewer code reviews\. For more information, see [Create an AWS CodeCommit repository](https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-create-repository.html) in the *AWS CodeCommit User Guide*\. 
 
 **Topics**
 + [Create a CodeCommit repository association \(CodeGuru Reviewer console\)](#create-codecommit-association-console)
@@ -22,7 +22,15 @@
 
 1. From **Repository location**, choose your CodeCommit repository\.
 
-1. \(Optional\) Expand **Tags** and add one or more tags to your repository association\. For more information, see [Tagging a repository association in Amazon CodeGuru Reviewer](tag-repository-association.md)\.
+1. \(Optional\) Expand **Encryption key \- optional** to use your own AWS Key Management Service key \(KMS key\) to encrypt your associated repository\. For more information, see [Encrypting a repository association in Amazon CodeGuru Reviewer](encrypt-repository-association.md)\.
+
+   1. Select **Customize encryption settings \(advanced\)**\.
+
+   1. Do one of the following: 
+      + If you already have a KMS key that you manage, enter its Amazon Resource Name \(ARN\)\. For information about finding the ARN of your key using the console, see [Finding the key ID and ARN](https://docs.aws.amazon.com/kms/latest/developerguide/find-cmk-id-arn.html) in the *AWS Key Management Service Developer Guide*\.
+      + If you want to create a new KMS key, choose **Create an AWS KMS key** and follow the steps in the AWS KMS console\. For more information, see [Creating keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.
+
+1. \(Optional\) Expand **Tags** to add one or more tags to your repository association\. For more information, see [Tagging a repository association in Amazon CodeGuru Reviewer](tag-repository-association.md)\.
 
    1. Choose **Add new tag**\.
 
@@ -42,7 +50,7 @@ You can [connect to CodeGuru Reviewer directly from the CodeCommit console\.](ht
 
 **To create a CodeCommit repository association**
 
-1. Make sure that you have configured the AWS CLI with the AWS Region in which want to create your code reviews and in which your CodeCommit repository exists\. To verify the Region, run the following command at the command line or terminal and review the information for the default name\. 
+1. Make sure that you have configured the AWS CLI with the AWS Region in which you want to create your code reviews and in which your CodeCommit repository exists\. To verify the Region, run the following command at the command line or terminal and review the information for the default name\. 
 
    ```
    aws configure
@@ -80,7 +88,7 @@ You can [connect to CodeGuru Reviewer directly from the CodeCommit console\.](ht
    aws codeguru-reviewer describe-repository-association --association-arn arn:aws:codeguru-reviewer:us-west-2:123456789012:association:repository-association-uuid
    ```
 
-1.  If successful, this command outputs a [https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html) object which shows its status\. 
+1. If successful, this command outputs a [https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html) object which shows its status\. 
 
    ```
    {
@@ -100,4 +108,4 @@ You can [connect to CodeGuru Reviewer directly from the CodeCommit console\.](ht
 
 ## Create a CodeCommit repository association \(AWS SDKs\)<a name="create-codecommit-association-sdk"></a>
 
- To create a CodeCommit repository association with the AWS SDKs, use the `AssociateRepository` API\. For more information, see [AssociateRepository](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_AssociateRepository.html) in the *Amazon CodeGuru Reviewer API Reference*\. 
+To create a CodeCommit repository association with the AWS SDKs, use the `AssociateRepository` API\. For more information, see [AssociateRepository](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_AssociateRepository.html) in the *Amazon CodeGuru Reviewer API Reference*\. 

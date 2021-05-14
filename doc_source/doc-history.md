@@ -2,10 +2,11 @@
 
 The following table describes the major updates and new features for the *Amazon CodeGuru Reviewer User Guide*\. We also update the documentation frequently to address the feedback that you send us\. For notification about updates to this documentation, you can subscribe to an RSS feed\.
 
-**Latest documentation update: **December 4, 2020
+**Latest documentation update: **May 5, 2021
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [New topic](#doc-history) | CodeGuru Reviewer now supports encryption of an associated repository using an *AWS KMS key*\. For more information, see [Encrypting a repository association in CodeGuru Reviewer](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/encrypt-repository-association.html)\. | April 26, 2021 | 
 | [Updated topics](#doc-history) | CodeGuru Reviewer now supports reviews of Python source code\.  | December 3, 2020 | 
 | [New topic](#doc-history) | CodeGuru Reviewer now supports code reviews that include security analysis for Java applications\. For more information, see [Create code reviews with security analysis in CodeGuru Reviewer](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/code-review-security.html)\.  | December 1, 2020 | 
 | [Updated topic](#doc-history) | CodeGuru Reviewer now supports analysis that helps you improve the quality of your code\. For more information, see [Code quality recommendations](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/recommendations.html#code-quality)\.  | November 25, 2020 | 
