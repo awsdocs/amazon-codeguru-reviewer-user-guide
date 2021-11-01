@@ -6,7 +6,7 @@ There are two different kinds of code reviews that CodeGuru Reviewer can do to p
 + *Pull request code reviews* are created automatically when you create a pull request from your repository context on an associated repository\. These code reviews scan the changed code in a pull request
 + *Repository analysis code reviews* are done when you create a repository analysis code review in the CodeGuru Reviewer console\. These code reviews scan all the code in a specified branch\.
 
-For more information, see [About repository analysis and pull request code reviews](repository-analysis-vs-pull-request.md)\.
+For more information, see [About full repository analysis and incremental code reviews](repository-analysis-vs-pull-request.md)\.
 
  If a repository contains Java and Python files, then CodeGuru Reviewer generates recommendations for the language for which there are more files\. For example, if there are five Java files and ten Python files in an associated repository, then recommendations for the Python code are generated and no recommendations for the Java code are generated\. If the number of Java and Python files is the same, then only Java recommendations are generated\. 
 

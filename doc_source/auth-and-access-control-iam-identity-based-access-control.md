@@ -8,6 +8,7 @@ To learn how to create an IAM identity\-based policy using these example JSON po
 + [Policy best practices](#security_iam_service-with-iam-policy-best-practices)
 + [Permissions required to use the CodeGuru Reviewer console](#console-permissions)
 + [AWS managed \(predefined\) policies for CodeGuru Reviewer](#managed-policies)
++ [CodeGuru Reviewer updates to AWS managed policies](#security-iam-awsmanpol-updates)
 + [Customer managed policy examples](#security_iam_id-based-policy-examples)
 
 ## Policy best practices<a name="security_iam_service-with-iam-policy-best-practices"></a>
@@ -99,7 +100,7 @@ The `AmazonCodeGuruReviewerFullAccess` policy contains the following statement\.
             "Resource": "arn:aws:iam::*:role/aws-service-role/codeguru-reviewer.amazonaws.com/AWSServiceRoleForAmazonCodeGuruReviewer"
         },
         {
-            "Sid": "CodeCommitAccess",
+            "Sid": "codecommitAccess",
             "Effect": "Allow",
             "Action": [
                 "codecommit:ListRepositories"
@@ -107,7 +108,7 @@ The `AmazonCodeGuruReviewerFullAccess` policy contains the following statement\.
             "Resource": "*"
         },
         {
-            "Sid": "CodeCommitTagManagement",
+            "Sid": "codecommitTagManagement",
             "Effect": "Allow",
             "Action": [
                 "codecommit:TagResource",
@@ -277,10 +278,14 @@ The `AmazonCodeGuruReviewerServiceRolePolicy` policy contains the following stat
             }
         },
         {
-            "Sid": "AllowGuruS3GetObject",
+            "Sid": "AccessCodeGuruReviewerCreatedS3Bucket",
             "Effect": "Allow",
-            "Action": [
-                "s3:GetObject"
+            "Action": [    
+                "s3:GetObject",
+                "s3:CreateBucket",
+                "s3:ListBucket",
+                "s3:PutBucketPolicy",
+                "s3:PutLifecycleConfiguration"
             ],
             "Resource": [
                 "arn:aws:s3:::codeguru-reviewer-*",
@@ -290,6 +295,20 @@ The `AmazonCodeGuruReviewerServiceRolePolicy` policy contains the following stat
     ]
 }
 ```
+
+## CodeGuru Reviewer updates to AWS managed policies<a name="security-iam-awsmanpol-updates"></a>
+
+
+
+View details about updates to AWS managed policies for CodeGuru Reviewer since this service began tracking these changes\. For automatic alerts about changes to this page, subscribe to the RSS feed on the CodeGuru Reviewer [CodeGuru Reviewer user guide document history](doc-history.md)\.
+
+
+
+
+| Change | Description | Date | 
+| --- | --- | --- | 
+|  [AmazonCodeGuruReviewerServiceRolePolicy](#managed-policy-for-codecommit-and-codestar-connections) – Update to an existing policy  |  CodeGuru Reviewer added new permissions to allow access to the `CreateBucket`, `ListBucket`, `PutBucketPolicy`, and `PutLifecycleConfiguration` actions on an Amazon S3 bucket resource\.  | April 28, 2021 | 
+|  CodeGuru Reviewer started tracking changes  |  CodeGuru Reviewer started tracking changes for its AWS managed policies\.  | July 2, 2020 | 
 
 ## Customer managed policy examples<a name="security_iam_id-based-policy-examples"></a>
 

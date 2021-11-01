@@ -29,7 +29,7 @@ Because the example application contains intentional inefficiencies, CodeGuru Re
 
 1.  Choose **Associate repository**\. 
 
-1.  Make sure **GitHub** is selected, and then choose **Connect to GitHub**\. 
+1.  Make sure **GitHub or GitHub Enterprise Cloud** is selected, and then choose **Connect to your GitHub account**\. 
 
 1.  To allow CodeGuru Reviewer to access your account, choose **Authorize aws\-codesuite**\. If prompted, confirm your GitHub password\. 
 

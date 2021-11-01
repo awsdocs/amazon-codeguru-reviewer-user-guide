@@ -1,7 +1,7 @@
 # Tagging a repository association in Amazon CodeGuru Reviewer<a name="tag-repository-association"></a>
 
 A *tag* is a custom attribute label that you or AWS assigns to an AWS resource\. Each AWS tag has two parts:
-+ A *tag *key** \(for example, `CostCenter`, `Environment`, `Project`, or `Secret`\)\. Tag *key*s are case sensitive\.
++ A tag *key* \(for example, `CostCenter`, `Environment`, `Project`, or `Secret`\)\. Tag *key*s are case sensitive\.
 + An optional field known as a tag *value* \(for example, `111122223333`, `Production`, or a team name\)\. Omitting the tag *value* is the same as using an empty string\. Like tag *key*s, tag *value*s are case sensitive\.
 
 Together these are known as *key*\-*value* pairs\. For limits on the number of tags you can have on an associated repository and restrictions on tag *key*s and *value*s, see [Tags](quotas.md#limits-tags)\. 

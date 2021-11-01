@@ -7,8 +7,8 @@ We recommend that you use both CodeGuru Reviewer and traditional peer review pro
 
  For more information, see: 
 + [View code review details](view-code-review-details.md)
-+ [Get recommendations using repository analysis](create-code-reviews.md#get-repository-scan) 
-+ [Get recommendations using pull requests](create-code-reviews.md#get-pull-request-scan)
++ [Get recommendations using full repository analysis](create-code-reviews.md#get-repository-scan) 
++ [Get recommendations using incremental code reviews](create-code-reviews.md#get-pull-request-scan)
 
 ## About repository analysis and pull request scans<a name="repository-analysis-vs-pull-request-getting-started"></a>
 

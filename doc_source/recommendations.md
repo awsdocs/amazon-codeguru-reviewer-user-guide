@@ -4,16 +4,19 @@ Amazon CodeGuru Reviewer recommends various kinds of fixes in your Java and Pyth
 
 If you don't agree with a recommendation, you can [provide feedback](provide-feedback.md) in the CodeGuru Reviewer console or by commenting on the code in the pull requests\. Any positive or negative feedback can be used to help improve the performance of CodeGuru Reviewer so that recommendations get better over time\.
 
-The following kinds of recommendations are provided: 
-+ AWS best practices
-+ Concurrency
-+ Security
-+ Resource leak prevention
-+ Sensitive information leak prevention
-+ Common coding best practices
-+ Refactoring
-+ Input validation
-+ Code maintainability detector
+The following kinds of recommendations are provided\. 
+
+**Topics**
++ [AWS best practices](#best-practices)
++ [Concurrency](#concurrency)
++ [Resource leak prevention](#resource-leak-prevention)
++ [Security analysis](#security-analysis)
++ [Sensitive information leak prevention](#info-leak-prevention)
++ [Common coding best practices](#common-bug-fixes)
++ [Refactoring](#refactoring)
++ [Input validation](#input-validation)
++ [Code maintainability detector](#code-quality)
++ [Third\-party recommendations](#third-party-recommendations)
 
 ## AWS best practices<a name="best-practices"></a>
 
@@ -23,13 +26,13 @@ AWS APIs contain a rich set of features to ensure performance and stability of s
 
 CodeGuru Reviewer identifies problems with implementations of concurrency in multithreaded code\. Concurrency defects are often subtle and escape even expert programmers\. Incorrect implementations of concurrency can lead to incorrect code or performance issues\. CodeGuru Reviewer identifies atomicity violations that might result in correctness problems, and it identifies excessive synchronizations that might result in performance problems\.
 
-## Security analysis<a name="security-analysis"></a>
-
- When you create a code review with security analysis, CodeGuru Reviewer performs a code review and also detects issues in your Java code that might compromise its security\. For each detected security issue, a recommendation is provided to help you improve your code security\. Security analysis does not support Python source code\. For more information, see [Create code reviews with security analysis in CodeGuru Reviewer](code-review-security.md)\. 
-
 ## Resource leak prevention<a name="resource-leak-prevention"></a>
 
 CodeGuru Reviewer looks for lines of code where resource leaks might be occurring\. Resource leaks can cause latency issues and outages\. CodeGuru Reviewer can point to code where this might be occurring and suggest handling the resources in a different way\.
+
+## Security analysis<a name="security-analysis"></a>
+
+ When you create a code review with security analysis, CodeGuru Reviewer performs a code review and also detects issues in your code that might compromise its security\. For each detected security issue, a recommendation is provided to help you improve your code security\. For more information, see [Create code reviews with GitHub Actions](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/working-with-cicd.html)\.
 
 ## Sensitive information leak prevention<a name="info-leak-prevention"></a>
 
@@ -65,3 +68,13 @@ Class fan out
 
 Class cohesion  
  CodeGuru Reviewer notices if a class contains clusters of instance methods that do not have any accessed class members in common\. For example, a cluster of two methods might access only the class fields `x` and `y`, and another cluster of methods in the same class might access only the class fields `a` and `b`\. A high number of these clusters indicates low *class cohesion*\. Classes with low cohesion contain unrelated operations, can be difficult to understand, and are often less likely to be used\.
+
+## Third\-party recommendations<a name="third-party-recommendations"></a>
+
+ Amazon CodeGuru Reviewer code reviews incorporate analysis from third\-party providers\. If a third\-party tool finds an issue during a code review, then it adds recommendations to the recommendations created by CodeGuru Reviewer\. The following third\-party solutions are used during a code review\. 
+
+Infer  
+Infer is a third\-party tool that analyzes your Java code and detects potential bugs\. For more information about Infer, see its website at [Infer](https://fbinfer.com/)\. For the types of issues that Infer detects, see [List of all Infer issue types](https://fbinfer.com/docs/all-issue-types) on the Infer website\.
+
+Bandit  
+Bandit is a third\-party tool that finds security issues in Python code\. For more information about Bandit, see its website at [Bandit](https://bandit.readthedocs.io/en/latest/#)\. 
