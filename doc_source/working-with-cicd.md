@@ -34,9 +34,9 @@ You can enable security and code quality recommendations with GitHub Actions by 
 
 ## To disassociate your workflow<a name="w205aac25b9"></a>
 
-If your CI workflow association fails, you can disassociate your repository by choosing **Disassociate**\. If you want to associate your CI workflow later, you can associate your repository again by following set up steps\.
+If your CI workflow association fails, you can disassociate your repository by choosing **Disassociate repository**\. If you want to associate your CI workflow later, you can associate your repository again by following set up steps\.
 
-If you want to stop CodeGuru Reviewer recommendations for your CI workflow, remove the codeguru action script from your repository’s YML file\. Then, choose **Disassociate** to remove the repository association\. On your next job run, CodeGuru Reviewer associates the repository again unless you remove the codeguru action script from the YML file\.
+If you want to stop CodeGuru Reviewer recommendations for your CI workflow, remove the codeguru action script from your repository’s YML file\. Then, choose **Disassociate repository** to remove the repository association\. On your next job run, CodeGuru Reviewer associates the repository again unless you remove the codeguru action script from the YML file\.
 
 ## Examples<a name="w205aac25c11"></a>
 

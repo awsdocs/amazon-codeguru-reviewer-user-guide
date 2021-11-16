@@ -16,6 +16,6 @@ You can use the Amazon CodeGuru Reviewer console to add one or more tags when yo
 
 1. In **Key**, enter a name for the tag\. You can add an optional value for the tag in **Value**\. 
 
-1. \(Optional\) To add another tag, choose **Add tag** again\.
+1. \(Optional\) To add another tag, choose **Add new tag**\.
 
 1. Complete the rest of the steps to create your repository association\.

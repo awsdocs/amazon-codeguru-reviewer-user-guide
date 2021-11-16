@@ -112,5 +112,5 @@ Because the example application contains intentional inefficiencies, CodeGuru Re
 
 1.  Delete your clone of the forked repository, for example, `rm -rf amazon-codeguru-reviewer-sample-app`\. 
 
-1.  In the CodeGuru Reviewer console, select the example repository, choose **Actions**, and then choose **Disassociate repository**\.   
+1.  In the CodeGuru Reviewer console, select the example repository and choose **Disassociate repository**\.   
 ![\[GitHub tutorial step 6: Disassociate a CodeGuru Reviewer associated repository\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/)![\[GitHub tutorial step 6: Disassociate a CodeGuru Reviewer associated repository\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/)![\[GitHub tutorial step 6: Disassociate a CodeGuru Reviewer associated repository\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/)

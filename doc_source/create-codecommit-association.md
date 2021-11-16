@@ -28,7 +28,7 @@ You can create an AWS CodeCommit repository association using the Amazon CodeGur
 
    1. Do one of the following: 
       + If you already have a KMS key that you manage, enter its Amazon Resource Name \(ARN\)\. For information about finding the ARN of your key using the console, see [Finding the key ID and ARN](https://docs.aws.amazon.com/kms/latest/developerguide/find-cmk-id-arn.html) in the *AWS Key Management Service Developer Guide*\.
-      + If you want to create a new KMS key, choose **Create an AWS KMS key** and follow the steps in the AWS KMS console\. For more information, see [Creating keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.
+      + If you want to create a KMS key, choose **Create an AWS KMS key** and follow the steps in the AWS KMS console\. For more information, see [Creating keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.
 
 1. \(Optional\) Expand **Tags** to add one or more tags to your repository association\. For more information, see [Tagging a repository association in Amazon CodeGuru Reviewer](tag-repository-association.md)\.
 
@@ -36,7 +36,7 @@ You can create an AWS CodeCommit repository association using the Amazon CodeGur
 
    1. In **Key**, enter a name for the tag\. You can add an optional value for the tag in **Value**\. 
 
-   1. \(Optional\) To add another tag, choose **Add tag** again\.
+   1. \(Optional\) To add another tag, choose **Add new tag**\.
 
 1. Choose **Associate**\. On the **Repositories ** page, the **Status** is **Associating**\. When the association is complete, the status changes to **Associated** and you can create a pull request or a repository analysis to get recommendations\. Refresh the page to check for the status change\. 
 
