@@ -12,6 +12,6 @@ Providing feedback can improve the quality of recommendations Amazon CodeGuru Re
 
 You can also view recommendations and provide feedback in incremental code reviews directly in your repository source provider, or by using the CLI\. For more information, see [Step 4: Provide feedback](provide-feedback.md)\.
 
-![\[The Code review details window in the CodeGuru Reviewer console\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/)
+![\[The Code review details window in the CodeGuru Reviewer console\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/images/code-review-feedback.png)
 
 Your feedback is used to improve CodeGuru Reviewer through model\-tuning efforts that will help make CodeGuru Reviewer recommendations more useful to you and others\.

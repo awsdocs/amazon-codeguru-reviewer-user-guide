@@ -60,7 +60,7 @@ Amazon's trademarks and trade dress may not be used in
    + [View recommendations and provide feedback](give-feedback-from-code-review-details.md)
 + [Create code reviews with GitHub Actions](working-with-cicd.md)
 + [Product and service integrations](integrations.md)
-+ [Recommendations in Amazon CodeGuru Reviewer](recommendations.md)
++ [Recommendation types in CodeGuru Reviewer](recommendations.md)
 + [Security in CodeGuru Reviewer](security.md)
    + [Data protection for CodeGuru Reviewer](data-protection.md)
    + [Identity and access management in CodeGuru Reviewer](auth-and-access-control.md)

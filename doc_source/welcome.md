@@ -17,7 +17,7 @@ CodeGuru Reviewer doesn't flag syntactical mistakes, as these are relatively eas
 + Security analysis
 + Code quality
 
-For more information, see [Recommendations in Amazon CodeGuru Reviewer](recommendations.md)\.
+For more information, see [Recommendation types in CodeGuru Reviewer](recommendations.md)\.
 
 ## What languages and repositories can I use with CodeGuru Reviewer?<a name="welcome-repositories"></a>
 

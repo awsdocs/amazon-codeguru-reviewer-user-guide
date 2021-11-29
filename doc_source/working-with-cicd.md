@@ -1,8 +1,21 @@
 # Create code reviews with GitHub Actions<a name="working-with-cicd"></a>
 
-Amazon CodeGuru Reviewer finds issues in your Java and Python code and recommends how to remediate them\. CodeGuru Reviewer detects deviation from best practices for using AWS APIs and SDKs, and also identifies concurrency issues, resource leaks, security vulnerabilities and validates input parameters validation\. For every push, pull, or scheduled repository scan, CodeGuru Reviewer enabled on your build workflow, the CodeGuru Reviewer GitHub Action copies your code and build artifacts into an S3 bucket in your AWS account and calls CodeGuru Reviewer APIs to analyze the artifacts and provide recommendations\.
+Amazon CodeGuru Reviewer finds issues in your Java and Python code and recommends how to remediate them\. CodeGuru Reviewer detects deviation from best practices for using AWS APIs and SDKs, and also identifies concurrency issues, resource leaks, security vulnerabilities and validates input parameters validation\. First, you enable CodeGuru Reviewer on your build workflow\. Next, for every push, pull, or scheduled repository scan, the CodeGuru Reviewer GitHub Action copies your code and build artifacts into an S3 bucket in your AWS account\. CodeGuru Reviewer APIs are used to analyze the artifacts and provide recommendations\.
 
 You can enable security and code quality recommendations with GitHub Actions by making the following changes to your workflow\. If your repository has files in both Java and Python, then CodeGuru Reviewer will provide recommendations for the language that has more files\. An example workflow file could be `.github/workflows/build.yml`\.
+
+## Get recommendations using GitHub Actions<a name="working-with-github-actions"></a>
+
+This sections shows you how to create recommendations using GitHub Actions, disassociate a workflow, and provides examples to get your started\. 
+
+**Topics**
++ [Create code reviews with GitHub Actions](#create-recommendations-with-github-actions)
++ [Disassociate your CI/CD workflow](#disassociate-your-workflow)
++ [GitHub Actions code review examples](#codeguru-reviewer-on-github-hosted-runner-example)
+
+### Create code reviews with GitHub Actions<a name="create-recommendations-with-github-actions"></a>
+
+This section shows you how to create code reviews and get recommendations using GitHub Actions\.
 
 **To start recommendations using GitHub Actions**
 
@@ -19,12 +32,12 @@ You can enable security and code quality recommendations with GitHub Actions by 
 1. Add the CodeGuru Reviewer Action\. The following is how you can enable your workflow, as supported by CodeGuru Reviewer\.
 
    ```
-   - name: AWS CodeGuru Reviewer Scanner
-     if: ${{ always() }}
-     uses: aws-actions/codeguru-reviewer@v1.1
-     with:
-       build_path: target # build artifact(s) directory. This is only required for Java repositories
-       s3_bucket: codeguru-reviewer-myactions-bucket  # S3 Bucket with "codeguru-reviewer-*" prefix
+   - name: Amazon CodeGuru Reviewer Scanner
+         if: ${{ always() }}
+         uses: aws-actions/codeguru-reviewer@v1.1
+         with:
+           build_path: target # build artifact(s) directory. This is only required for Java repositories
+           s3_bucket: codeguru-reviewermyactions-bucket  # S3 Bucket with "codeguru-reviewer-*" prefix
    ```
 
    The following is a list of parameters\.    
@@ -32,13 +45,13 @@ You can enable security and code quality recommendations with GitHub Actions by 
 
 1. Run your workflow in GitHub to start the code analysis\. When the build is complete, review your recommendations in the GitHub Security tab\.
 
-## To disassociate your workflow<a name="w205aac25b9"></a>
+### Disassociate your CI/CD workflow<a name="disassociate-your-workflow"></a>
 
 If your CI workflow association fails, you can disassociate your repository by choosing **Disassociate repository**\. If you want to associate your CI workflow later, you can associate your repository again by following set up steps\.
 
 If you want to stop CodeGuru Reviewer recommendations for your CI workflow, remove the codeguru action script from your repository’s YML file\. Then, choose **Disassociate repository** to remove the repository association\. On your next job run, CodeGuru Reviewer associates the repository again unless you remove the codeguru action script from the YML file\.
 
-## Examples<a name="w205aac25c11"></a>
+### GitHub Actions code review examples<a name="codeguru-reviewer-on-github-hosted-runner-example"></a>
 
 Run CodeGuru Reviewer Action on a GitHub hosted runner\.
 
@@ -57,7 +70,7 @@ steps:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-west-2
 
-    - name: AWS CodeGuru Reviewer Scanner
+    - name: Amazon CodeGuru Reviewer Scanner
       uses: aws-actions/codeguru-reviewer@v1.1
       if: ${{ always() }} 
       with:
@@ -88,12 +101,12 @@ steps:
         role-to-assume: my-github-actions-role
 
     # Refer to Step 2 for more details
-    - name: AWS CodeGuru Reviewer
+    - name: Amazon CodeGuru Reviewer
       uses: aws-actions/codeguru-reviewer@v1.1
       if: ${{ always() }}
       with:          
         build_path: target # build artifact(s) directory
-        s3_bucket: codeguru-reviewer-my-bucket
+        s3_bucket: codeguru-reviewermy-bucket
 
     - name: Upload review result
       if: ${{ github.event_name != 'push' }}

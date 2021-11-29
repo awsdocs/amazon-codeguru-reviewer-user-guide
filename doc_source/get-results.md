@@ -9,6 +9,7 @@ We recommend that you use both CodeGuru Reviewer and traditional peer review pro
 + [View code review details](view-code-review-details.md)
 + [Get recommendations using full repository analysis](create-code-reviews.md#get-repository-scan) 
 + [Get recommendations using incremental code reviews](create-code-reviews.md#get-pull-request-scan)
++ [Get recommendations using GitHub Actions and a CI/CD workflow](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/working-with-cicd.html)
 
 ## About repository analysis and pull request scans<a name="repository-analysis-vs-pull-request-getting-started"></a>
 
@@ -17,5 +18,6 @@ You can get recommendations in code reviews by using a repository analysis or a 
 
 | Type of code review | Is the review automatic after I associate the repository? | Where can I see recommendations? | What code is reviewed? | 
 | --- | --- | --- | --- | 
-|  Repository analysis  |  No\. You must request a repository analysis in the CodeGuru Reviewer console or by using the AWS CLI or AWS SDK\.  |  In the CodeGuru Reviewer console, or by using the AWS CLI or AWS SDK\.   |  All the code in the branch is reviewed\.  | 
-|  Pull request  |  Yes\. After associating the repository, every time you do a pull request there is a code review\.  |  In the CodeGuru Reviewer console, in the AWS CLI or AWS SDK, or in pull request comments in the repository source provider\.  |  The code that is changed in the pull request is reviewed\.  | 
+|  Full repository analysis  |  Your first full repository analysis is done automatically when you associate your repository\. After that, you must request a repository analysis in the CodeGuru Reviewer console or by using the AWS CLI or AWS SDK\.  |  In the CodeGuru Reviewer console, or by using the AWS CLI or AWS SDK\.   |  All the code in the branch is reviewed\.  | 
+|  Incremental code review  |  Yes\. After associating the repository, every time you do a pull request there is a code review\.  |  In the CodeGuru Reviewer console, in the AWS CLI or AWS SDK, or in pull request comments in the repository source provider\.  |  The code that is changed in the pull request is reviewed\.  | 
+|  GitHub Actions code review in a CI/CD workflow  |  Yes\. After enabling CodeGuru Reviewer on your GitHub repository, for every push, pull, or scheduled repository scan there is a code review\.  |  In the GitHub Security tab\.  |  The code that is changed in the push, pull, or scheduled repository scan\.  | 

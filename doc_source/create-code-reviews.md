@@ -5,7 +5,7 @@ Amazon CodeGuru Reviewer uses code reviews to provide [different kinds of recomm
 **Note**  
 We recommend that you use both CodeGuru Reviewer and traditional peer review processes during the code review stage\. Using a combination of code review processes helps to identify more issues before they reach production\.
 
-There are two different kinds of code reviews that CodeGuru Reviewer can do to provide recommendations\.
+There are three different kinds of code reviews that CodeGuru Reviewer can do to provide recommendations\.
 +  *Incremental code reviews* are created automatically when you create an pull request from your repository context on an associated repository\. These code reviews scan the changed code in a pull request\.
 + *Full repository analysis code reviews* scan all the code in a specified branch in the CodeGuru Reviewer console\.
 + *Full repository analysis code reviews for CI/CD workflows* scan all the source code in your CI/CD workflow\. For more information, see [Create code reviews with GitHub Actions](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/working-with-cicd.html)\.
@@ -15,6 +15,7 @@ For more information on the difference between incremental code reviews and full
 **Topics**
 + [Get recommendations using full repository analysis](#get-repository-scan)
 + [Get recommendations using incremental code reviews](#get-pull-request-scan)
++ [Get recommendations using GitHub Actions](#working-with-github-actions)
 
 ## Get recommendations using full repository analysis<a name="get-repository-scan"></a>
 
@@ -41,3 +42,114 @@ To view the recommendations, navigate to the **Code reviews** page in the consol
 To get recommendations from CodeGuru Reviewer after you associate a repository, use the repository source provider to make an incremental code review\. CodeGuru Reviewer then provides recommendations as incremental code review comments in the source provider to improve your code\. 
 
 To view the recommendations in the CodeGuru Reviewer console, navigate to the **Code reviews** page in the console and choose the name of the code review to view the detailed code review page\.
+
+## Get recommendations using GitHub Actions<a name="working-with-github-actions"></a>
+
+This sections shows you how to create recommendations using GitHub Actions, disassociate a workflow, and provides examples to get your started\. 
+
+**Topics**
++ [Create code reviews with GitHub Actions](#create-recommendations-with-github-actions)
++ [Disassociate your CI/CD workflow](#disassociate-your-workflow)
++ [GitHub Actions code review examples](#codeguru-reviewer-on-github-hosted-runner-example)
+
+### Create code reviews with GitHub Actions<a name="create-recommendations-with-github-actions"></a>
+
+This section shows you how to create code reviews and get recommendations using GitHub Actions\.
+
+**To start recommendations using GitHub Actions**
+
+1. Create an S3 bucket with the prefix, **codeguru\-reviewer\-\*** to upload your code and artifacts\. For information on creating a new Amazon S3 bucket, see [Creating a bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html)\.
+
+1. Sign into your GitHub account to complete the CI/CD integration process\. Your repository must be public or private if it's part of a GitHub organization, in order for GitHub actions to work\.
+
+1. In order to run the CodeGuru Reviewer Action, you need to provide AWS credentials\. We recommend using [aws\-actions/configure\-aws\-credentials](https://github.com/aws-actions/configure-aws-credentials) to configure your credentials for a job\. For self\-hosted runners, the `configure-aws-credentials` action assumes the runner’s IAM credentials or role to the CodeGuru Reviewer Action\. Docker must be installed for self\-hosted runners\. For information on installing Docker, see [Get started with Docker](https://docs.docker.com/get-started/)\.
+
+   For GitHub hosted runners, you can configure the credentials in GitHub Secrets\. 
+
+   The IAM user or IAM role should have the `AmazonCodeGuruReviewerFullAccess` policy enabled and Amazon S3 Permissions `(s3:PutObject, s3:ListBucket, s3:GetObject)`\. For more details on AWS credentials, see [Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)\. 
+
+1. Add the CodeGuru Reviewer Action\. The following is how you can enable your workflow, as supported by CodeGuru Reviewer\.
+
+   ```
+   - name: Amazon CodeGuru Reviewer Scanner
+         if: ${{ always() }}
+         uses: aws-actions/codeguru-reviewer@v1.1
+         with:
+           build_path: target # build artifact(s) directory. This is only required for Java repositories
+           s3_bucket: codeguru-reviewermyactions-bucket  # S3 Bucket with "codeguru-reviewer-*" prefix
+   ```
+
+   The following is a list of parameters\.    
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/create-code-reviews.html)
+
+1. Run your workflow in GitHub to start the code analysis\. When the build is complete, review your recommendations in the GitHub Security tab\.
+
+### Disassociate your CI/CD workflow<a name="disassociate-your-workflow"></a>
+
+If your CI workflow association fails, you can disassociate your repository by choosing **Disassociate repository**\. If you want to associate your CI workflow later, you can associate your repository again by following set up steps\.
+
+If you want to stop CodeGuru Reviewer recommendations for your CI workflow, remove the codeguru action script from your repository’s YML file\. Then, choose **Disassociate repository** to remove the repository association\. On your next job run, CodeGuru Reviewer associates the repository again unless you remove the codeguru action script from the YML file\.
+
+### GitHub Actions code review examples<a name="codeguru-reviewer-on-github-hosted-runner-example"></a>
+
+Run CodeGuru Reviewer Action on a GitHub hosted runner\.
+
+```
+steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0   # Required
+   
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      if: ${{ always() }} # This ensures that your workflow runs successfully
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-west-2
+
+    - name: Amazon CodeGuru Reviewer Scanner
+      uses: aws-actions/codeguru-reviewer@v1.1
+      if: ${{ always() }} 
+      with:
+        build_path: target # build artifact(s) directory
+        s3_bucket: codeguru-reviewer-my-bucket  # S3 Bucket with "codeguru-reviewer-*" prefix
+    
+    - name: Upload review result
+      if: ${{ github.event_name != 'push' }}
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: codeguru-results.sarif.json
+```
+
+Run CodeGuru Reviewer Action on a self\-hosted runner\.
+
+```
+steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Configure AWS Credentials
+      if: ${{ always() }} #  This ensures that your workflow runs successfully
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-region: us-west-2
+        role-to-assume: my-github-actions-role
+
+    # Refer to Step 2 for more details
+    - name: Amazon CodeGuru Reviewer
+      uses: aws-actions/codeguru-reviewer@v1.1
+      if: ${{ always() }}
+      with:          
+        build_path: target # build artifact(s) directory
+        s3_bucket: codeguru-reviewermy-bucket
+
+    - name: Upload review result
+      if: ${{ github.event_name != 'push' }}
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: codeguru-results.sarif.json
+```

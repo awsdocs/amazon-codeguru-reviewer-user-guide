@@ -44,6 +44,12 @@ Your GitHub Enterprise Server connection requires a *host*\. The host represents
       + If you already have a KMS key that you manage, enter its Amazon Resource Name \(ARN\)\. For information about finding the ARN of your key using the console, see [Finding the key ID and ARN](https://docs.aws.amazon.com/kms/latest/developerguide/find-cmk-id-arn.html) in the *AWS Key Management Service Developer Guide*\.
       + If you want to create a KMS key, choose **Create an AWS KMS key** and follow the steps in the AWS KMS console\. For more information, see [Creating keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.
 
+1. In **Run a repository analysis**, specify information for your associated repository's first full scan\. This scan generates your repository's initial code review\. For more information, see [Get recommendations using full repository analysis](create-code-reviews.md#get-repository-scan)\.
+
+   1. From **Source branch**, choose the branch to use\.
+
+   1. \(Optional\) In **Code review name**, type a name for your code review\.
+
 1. \(Optional\) Expand **Tags** to add one or more tags to your repository association\. For more information, see [Tagging a repository association in Amazon CodeGuru Reviewer](tag-repository-association.md)\.
 
    1. Choose **Add new tag**\.
@@ -52,7 +58,7 @@ Your GitHub Enterprise Server connection requires a *host*\. The host represents
 
    1. \(Optional\) To add another tag, choose **Add new tag**\.
 
-1. Choose **Associate**\. On the **Repositories ** page, the **Status** is **Associating**\. When the association is complete, the status changes to **Associated** and you can create a pull request or a repository analysis to get recommendations\. Refresh the page to check for the status change\. 
+1. Choose **Associate repository and run analysis**\. On the **Repositories ** page, the **Status** is **Associating**\. When the association is complete, the status changes to **Associated** and you can create a pull request or a repository analysis to get recommendations\. Refresh the page to check for the status change\. 
 
 ## Create a GitHub Enterprise Server repository association \(AWS CLI\)<a name="create-github-enterprise-association-cli"></a>
 
