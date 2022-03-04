@@ -5,7 +5,7 @@ Amazon CodeGuru Reviewer uses code reviews to provide [different kinds of recomm
 **Note**  
 We recommend that you use both CodeGuru Reviewer and traditional peer review processes during the code review stage\. Using a combination of code review processes helps to identify more issues before they reach production\.
 
- For more information, see: 
+ For more information, see the following topics: 
 + [View code review details](view-code-review-details.md)
 + [Get recommendations using full repository analysis](create-code-reviews.md#get-repository-scan) 
 + [Get recommendations using incremental code reviews](create-code-reviews.md#get-pull-request-scan)

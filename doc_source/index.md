@@ -15,7 +15,7 @@ Amazon's trademarks and trade dress may not be used in
 -----
 ## Contents
 + [What is Amazon CodeGuru Reviewer?](welcome.md)
-+ [How CodeGuru Reviewer works](how-codeguru-reviewer-works.md)
++ [How Amazon CodeGuru Reviewer works](how-codeguru-reviewer-works.md)
 + [Setting up Amazon CodeGuru Reviewer](setting-up-codeguru-reviewer.md)
    + [Sign up for AWS](get-set-up-sign-up-for-aws.md)
    + [Configure IAM permissions for Amazon CodeGuru Reviewer](get-set-up-configure-iam-permissions.md)
@@ -82,5 +82,5 @@ Amazon's trademarks and trade dress may not be used in
    + [Infrastructure security in CodeGuru Reviewer](infrastructure-security.md)
 + [Quotas for CodeGuru Reviewer](quotas.md)
 + [Troubleshooting](troubleshooting.md)
-+ [CodeGuru Reviewer user guide document history](doc-history.md)
++ [Amazon CodeGuru Reviewer user guide document history](doc-history.md)
 + [AWS glossary](glossary.md)

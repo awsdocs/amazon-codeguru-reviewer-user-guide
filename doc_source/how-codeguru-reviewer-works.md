@@ -1,4 +1,4 @@
-# How CodeGuru Reviewer works<a name="how-codeguru-reviewer-works"></a>
+# How Amazon CodeGuru Reviewer works<a name="how-codeguru-reviewer-works"></a>
 
 Amazon CodeGuru Reviewer uses program analysis combined with machine learning models trained on millions of lines of Java and Python code from the Amazon code base and other sources\. When you [associate CodeGuru Reviewer with a repository](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/getting-started-associate-repository.html), CodeGuru Reviewer can find and flag code defects and suggest recommendations to improve your code\. CodeGuru Reviewer provides actionable recommendations with a low rate of false positives and might improve its ability to analyze code over time based on user feedback\.
 

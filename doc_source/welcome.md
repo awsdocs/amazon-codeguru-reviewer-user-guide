@@ -1,23 +1,14 @@
 # What is Amazon CodeGuru Reviewer?<a name="welcome"></a>
 
-Amazon CodeGuru Reviewer is a service that uses program analysis and machine learning to detect potential defects that are difficult for developers to find and offers suggestions for improving your Java and Python code\. This service has been released for general availability in several [regions](https://docs.aws.amazon.com/general/latest/gr/codeguru-reviewer.html)\.
+Amazon CodeGuru Reviewer is a service that uses program analysis and machine learning to detect potential defects that are difficult for developers to find and offers suggestions for improving your Java and Python code\. This service has been released for general availability in several [Regions](https://docs.aws.amazon.com/general/latest/gr/codeguru-reviewer.html)\.
 
-By proactively detecting code defects, CodeGuru Reviewer can provide guidelines for addressing them and implementing best practices to improve the overall quality and maintainability of your code base during the code review stage\. For more information, see [How CodeGuru Reviewer works](how-codeguru-reviewer-works.md)\.
+By proactively detecting code defects, CodeGuru Reviewer can provide guidelines for addressing them and implementing best practices to improve the overall quality and maintainability of your code base during the code review stage\. For more information, see [How Amazon CodeGuru Reviewer works](how-codeguru-reviewer-works.md)\.
 
 ## What kind of recommendations does CodeGuru Reviewer provide?<a name="welcome-recommendations"></a>
 
-CodeGuru Reviewer doesn't flag syntactical mistakes, as these are relatively easy to find\. Instead, CodeGuru Reviewer will identify more complex problems and suggest improvements related to the following: 
-+ AWS best practices
-+ Concurrency
-+ Resource leak prevention
-+ Sensitive information leak prevention
-+ Common coding best practices
-+ Refactoring
-+ Input validation
-+ Security analysis
-+ Code quality
+CodeGuru Reviewer doesn't flag syntactical mistakes, as these are relatively easy to find\. Instead, CodeGuru Reviewer identifies more complex problems and suggests improvements related to recommendation types such as resource leak prevention or security analysis\. Within each type are several detectors that CodeGuru Reviewer uses to analyze your code\. For information about these detectors, see the [Amazon CodeGuru Reviewer Detector Library](https://docs.aws.amazon.com/codeguru/detector-library/index.html)\.
 
-For more information, see [Recommendation types in CodeGuru Reviewer](recommendations.md)\.
+CodeGuru Reviewer also integrates with AWS Secrets Manager to use a secrets detector that finds unprotected secrets in your code\. For more information, see [Secrets detection](recommendations.md#secrets-detection)\.
 
 ## What languages and repositories can I use with CodeGuru Reviewer?<a name="welcome-repositories"></a>
 

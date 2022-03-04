@@ -1,6 +1,8 @@
 # Working with repository associations in Amazon CodeGuru Reviewer<a name="working-with-repositories"></a>
 
-Amazon CodeGuru Reviewer requires a repository that contains the source code you want it to review\. To add a repository with your source code to CodeGuru Reviewer, you create a *repository association*\. When you associate a repository, you can enable a code review\.
+Amazon CodeGuru Reviewer requires a repository that contains the source code you want it to review\. 
+
+To add a repository with your source code to CodeGuru Reviewer, you create a *repository association*\. When you associate a repository, you can enable a code review\.
 
 There are two different kinds of code reviews that CodeGuru Reviewer can do to provide recommendations\.
 + *Pull request code reviews* are created automatically when you create a pull request from your repository context on an associated repository\. These code reviews scan the changed code in a pull request

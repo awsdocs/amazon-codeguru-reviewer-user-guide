@@ -1,6 +1,6 @@
 # Product and service integrations<a name="integrations"></a>
 
-By default, Amazon CodeGuru Reviewer is integrated with the following products and services\. The information provided here can help you configure CodeGuru Reviewer to integrate with the products and services you use\.
+By default, Amazon CodeGuru Reviewer is integrated with the following products and services\. The information provided in the following table can help you configure CodeGuru Reviewer to integrate with the products and services you use\. 
 
 
 **Products and services that are integrated with Amazon CodeGuru Reviewer**  
@@ -11,6 +11,7 @@ By default, Amazon CodeGuru Reviewer is integrated with the following products a
 | Amazon CloudWatch |  You can use Amazon CloudWatch to monitor the number of recommendations created for your source code in an associated repository over time\. For more information, see [Monitoring CodeGuru Reviewer with Amazon CloudWatch](monitoring.md)\.  | 
 | AWS CodeCommit |  You can configure CodeGuru Reviewer to provide analysis and recommendations for repositories in CodeCommit\.  For more information about CodeCommit, see the [CodeCommit user guide](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html)\.   | 
 | AWS CodeStar connections |  AWS CodeStar connections is a service that allows CodeGuru Reviewer to connect to third\-party repository source providers such as Bitbucket\. You do not need an AWS CodeStar connections account to get analysis and recommendations for repositories\.  | 
+| AWS Secrets Manager |   AWS Secrets Manager is a service that automatically integrates with CodeGuru Reviewer to find unprotected secrets in your code\. For more information, see [Secrets detection](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/recommendations.html#secrets-detection) and [Create a secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_create-basic-secret.html) in the *AWS Secrets Manager User Guide*\.   | 
 | Bitbucket |   You can configure CodeGuru Reviewer to [provide analysis and recommendations for repositories in Bitbucket](create-bitbucket-association.md)\. To do this, you must have created a Bitbucket account and at least one Bitbucket repository\.   | 
 | GitHub |   You can configure CodeGuru Reviewer to [provide analysis and recommendations for repositories in GitHub](create-github-association.md)\. To do this, you must have created a GitHub account and at least one GitHub repository\.   | 
 | GitHub Enterprise Cloud |   You can configure CodeGuru Reviewer to [provide analysis and recommendations for repositories in GitHub Enterprise Cloud](create-github-association.md) in the same way that you would for other GitHub repositories\. To do this, you must have created a GitHub Enterprise Cloud organization in your account and at least one repository\.   | 

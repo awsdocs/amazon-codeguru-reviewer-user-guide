@@ -300,7 +300,7 @@ The `AmazonCodeGuruReviewerServiceRolePolicy` policy contains the following stat
 
 
 
-View details about updates to AWS managed policies for CodeGuru Reviewer since this service began tracking these changes\. For automatic alerts about changes to this page, subscribe to the RSS feed on the CodeGuru Reviewer [CodeGuru Reviewer user guide document history](doc-history.md)\.
+View details about updates to AWS managed policies for CodeGuru Reviewer since this service began tracking these changes\. For automatic alerts about changes to this page, subscribe to the RSS feed on the CodeGuru Reviewer [Amazon CodeGuru Reviewer user guide document history](doc-history.md)\.
 
 
 
