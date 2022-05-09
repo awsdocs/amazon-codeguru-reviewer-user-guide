@@ -4,6 +4,8 @@ Amazon CodeGuru Reviewer recommends various kinds of fixes in your Java and Pyth
 
 If you don't agree with a recommendation, you can [provide feedback](provide-feedback.md) in the CodeGuru Reviewer console or by commenting on the code in the pull requests\. Any positive or negative feedback can be used to help improve the performance of CodeGuru Reviewer so that recommendations get better over time\.
 
+If you want to suppress recommendations from CodeGuru Reviewer, you can create and add to the root directory of your repository an `aws-codeguru-reviewer.yml` file that lists files and directories to exclude from analysis\. For more information, see [Suppress recommendations](recommendation-suppression.md)\. 
+
 The following content describes the secrets detection functionality of CodeGuru Reviewer\. For information about the other recommendation types and the detectors that CodeGuru Reviewer uses, see the [Amazon CodeGuru Reviewer Detector Library](https://docs.aws.amazon.com/codeguru/detector-library/index.html)\.
 
 ## Secrets detection<a name="secrets-detection"></a>

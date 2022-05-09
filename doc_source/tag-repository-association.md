@@ -1,10 +1,10 @@
 # Tagging a repository association in Amazon CodeGuru Reviewer<a name="tag-repository-association"></a>
 
 A *tag* is a custom attribute label that you or AWS assigns to an AWS resource\. Each AWS tag has two parts:
-+ A tag *key* \(for example, `CostCenter`, `Environment`, `Project`, or `Secret`\)\. Tag *key*s are case sensitive\.
-+ An optional field known as a tag *value* \(for example, `111122223333`, `Production`, or a team name\)\. Omitting the tag *value* is the same as using an empty string\. Like tag *key*s, tag *value*s are case sensitive\.
++ A tag *key* \(for example, `CostCenter`, `Environment`, `Project`, or `Secret`\)\. Tag keys are case sensitive\.
++ An optional field known as a tag *value* \(for example, `111122223333`, `Production`, or a team name\)\. Omitting the tag value is the same as using an empty string\. Like tag keys, tag values are case sensitive\.
 
-Together these are known as *key*\-*value* pairs\. For limits on the number of tags you can have on an associated repository and restrictions on tag *key*s and *value*s, see [Tags](quotas.md#limits-tags)\. 
+Together these are known as *key*\-*value* pairs\. For limits on the number of tags you can have on an associated repository and restrictions on tag keys and values, see [Tags](quotas.md#limits-tags)\. 
 
 Tags help you identify and organize your AWS resources\. Many AWS services support tagging, so you can assign the same tag to resources from different services to indicate that the resources are related\. For example, you can assign the same tag to a CodeGuru Reviewer associated repository that you assign to an AWS CodeBuild build project\. For more information about using tags, see the [Tagging best practices](https://d1.awsstatic.com/whitepapers/aws-tagging-best-practices.pdf) whitepaper\. 
 

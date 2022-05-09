@@ -16,11 +16,11 @@ You can create an AWS CodeCommit repository association using the Amazon CodeGur
 
 1. In the navigation pane, choose **Repositories**\. 
 
-1. Choose **Associate repository**\. 
+1. Choose **Associate repository and run analysis**\. 
 
 1. Choose **AWS CodeCommit**\. 
 
-1. From **Repository location**, choose your CodeCommit repository\.
+1. From **Repository location**, choose the name of your CodeCommit repository that contains the source code you want CodeGuru Reviewer to analyze\. 
 
 1. \(Optional\) Expand **Encryption key \- optional** to use your own AWS Key Management Service key \(KMS key\) to encrypt your associated repository\. For more information, see [Encrypting a repository association in Amazon CodeGuru Reviewer](encrypt-repository-association.md)\.
 
@@ -36,6 +36,9 @@ You can create an AWS CodeCommit repository association using the Amazon CodeGur
 
    1. \(Optional\) In **Code review name**, type a name for your code review\.
 
+   1. \(Optional\) Expand **Analysis configuration file \- optional** to download a sample `aws-codeguru-reviewer.yml` file to use as a template\. Modify the file and upload it to the root directory of your repository\. For more information about the analysis configuration file, see [Suppress recommendations](recommendation-suppression.md)\.  
+![\[The Run a repository analysis section with settings and sample YAML file information.\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/images/run-repo-analysis-config-file.png)
+
 1. \(Optional\) Expand **Tags** to add one or more tags to your repository association\. For more information, see [Tagging a repository association in Amazon CodeGuru Reviewer](tag-repository-association.md)\.
 
    1. Choose **Add new tag**\.
@@ -44,7 +47,7 @@ You can create an AWS CodeCommit repository association using the Amazon CodeGur
 
    1. \(Optional\) To add another tag, choose **Add new tag**\.
 
-1. Choose **Associate repository and run analysis**\. On the **Repositories ** page, the **Status** is **Associating**\. When the association is complete, the status changes to **Associated** and you can create a pull request or a repository analysis to get recommendations\. Refresh the page to check for the status change\. 
+1. Choose **Associate repository and run analysis**\. On the **Repositories** page, the **Status** is **Associating**\. When the association is complete, the status changes to **Associated** and a full repository analysis begins\. Refresh the page to check for the status change\. 
 
 ## Create a CodeCommit repository association \(CodeCommit console\)<a name="create-codecommit-association-other-console"></a>
 
@@ -62,7 +65,7 @@ You can [connect to CodeGuru Reviewer directly from the CodeCommit console\.](ht
    aws configure
    ```
 
-   The default region name must match the AWS Region for the repository in CodeCommit\. 
+   The default Region name must match the AWS Region for the repository in CodeCommit\. 
 
 1. Run the associate\-repository command specifying the name of the CodeCommit repository you want to associate\. 
 

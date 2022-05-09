@@ -54,6 +54,7 @@ Amazon's trademarks and trade dress may not be used in
          + [Remove tags from a CodeGuru Reviewer associated repository (AWS CLI)](how-to-tag-associated-repository-remove-cli.md)
 + [Working with code reviews](code-reviews.md)
    + [About full repository analysis and incremental code reviews](repository-analysis-vs-pull-request.md)
+   + [Suppress recommendations from Amazon CodeGuru Reviewer](recommendation-suppression.md)
    + [Create code reviews in Amazon CodeGuru Reviewer](create-code-reviews.md)
    + [View all code reviews](view-all-code-reviews.md)
    + [View code review details](view-code-review-details.md)

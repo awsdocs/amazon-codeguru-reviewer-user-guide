@@ -28,13 +28,13 @@ Your GitHub Enterprise Server connection requires a *host*\. The host represents
 
 1. In the navigation pane, choose **Repositories**\. 
 
-1. Choose **Associate repository**\. 
+1. Choose **Associate repository and run analysis**\. 
 
 1. Choose **GitHub Enterprise Server**\. 
 
 1. From **Connect to GitHub Enterprise Server \(with AWS CodeStar Connections\)**, choose the connection you want to use\. If you don't have a connection, choose **Create a GitHub Enterprise Server connection** to create one in the Developer Tools console\. For more information, see [Create a connection](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create.html) in the *AWS Developer Tools User Guide*\. 
 
-1. From **Repository location**, choose the GitHub Enterprise Server repository\.
+1. From **Repository location**, choose the name of your GitHub Enterprise Server repository that contains the source code you want CodeGuru Reviewer to analyze\.
 
 1. \(Optional\) Expand **Encryption key \- optional** to use your own AWS Key Management Service key \(KMS key\) to encrypt your associated repository\. For more information, see [Encrypting a repository association in Amazon CodeGuru Reviewer](encrypt-repository-association.md)\.
 
@@ -50,6 +50,9 @@ Your GitHub Enterprise Server connection requires a *host*\. The host represents
 
    1. \(Optional\) In **Code review name**, type a name for your code review\.
 
+   1. \(Optional\) Expand **Analysis configuration file \- optional** to download a sample `aws-codeguru-reviewer.yml` file to use as a template\. Modify the file and upload it to the root directory of your repository\. For more information about the analysis configuration file, see [Suppress recommendations](recommendation-suppression.md)\.  
+![\[The Run a repository analysis section with settings and sample YAML file information.\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/images/run-repo-analysis-config-file.png)
+
 1. \(Optional\) Expand **Tags** to add one or more tags to your repository association\. For more information, see [Tagging a repository association in Amazon CodeGuru Reviewer](tag-repository-association.md)\.
 
    1. Choose **Add new tag**\.
@@ -58,7 +61,7 @@ Your GitHub Enterprise Server connection requires a *host*\. The host represents
 
    1. \(Optional\) To add another tag, choose **Add new tag**\.
 
-1. Choose **Associate repository and run analysis**\. On the **Repositories ** page, the **Status** is **Associating**\. When the association is complete, the status changes to **Associated** and you can create a pull request or a repository analysis to get recommendations\. Refresh the page to check for the status change\. 
+1. Choose **Associate repository and run analysis**\. On the **Repositories ** page, the **Status** is **Associating**\. When the association is complete, the status changes to **Associated** and a full repository analysis begins\. Refresh the page to check for the status change\. 
 
 ## Create a GitHub Enterprise Server repository association \(AWS CLI\)<a name="create-github-enterprise-association-cli"></a>
 

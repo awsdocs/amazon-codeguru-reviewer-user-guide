@@ -3,7 +3,7 @@
 You can use the AWS CLI to add tags to an associated repository when you create it\. 
 
 **Note**  
-Because you cannot use the AWS CLI to create a GitHub repository, you cannot use the AWS CLI to add tags to a GitHub repository when you create it\. You can use the AWS CLI to add tags to an existing GitHub repository using tag\-resource\. You can also use add tags when you create a GitHub repository association with the console\. 
+Because you cannot use the AWS CLI to create a GitHub repository, you cannot use the AWS CLI to add tags to a GitHub repository when you create it\. You can use the AWS CLI to add tags to an existing GitHub repository using tag\-resource\. You can also add tags when you create a GitHub repository association with the console\. 
 
 **To add a tag when you create a repository association**
 
@@ -15,7 +15,7 @@ Because you cannot use the AWS CLI to create a GitHub repository, you cannot use
 
    The default Region name must match the AWS Region for the repository in CodeCommit\. 
 
-1. Run the associate\-repository command specifying the tags you want to add with the `--tags` parameter\. Specify a tag's *key* and *value* using an equal symbol \(for example, `my-key=my-value`\)\. For more information about how to use associate\-repository to create an association with your repository type, see one of the following: 
+1. Run the associate\-repository command specifying the tags you want to add with the `--tags` parameter\. Specify a tag's key and value using an equal symbol \(for example, `my-key=my-value`\)\. For more information about how to use associate\-repository to create an association with your repository type, see one of the following: 
    +  [Create a CodeCommit repository association \(AWS CLI\) ](create-codecommit-association.md#create-codecommit-association-cli) 
    +  [Create a Bitbucket repository association \(AWS CLI\) ](create-bitbucket-association.md#create-bitbucket-association-cli) 
    +  [Create a GitHub Enterprise Server repository association \(AWS CLI\) ](create-github-enterprise-association.md#create-github-enterprise-association-cli) 

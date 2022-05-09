@@ -3,7 +3,7 @@
 You can remove a tag from an associated repository using the console or the AWS CLI\.
 
 **Important**  
-Removing a tag from an associated repository can impact access to that associated repository\. Before you remove a tag from an associated repository, make sure to review any IAM policies that might use its *key* or *value* to control access to resources such as associated repositories\. For examples of tag\-based access policies, see [Using tags to control access to Amazon CodeGuru Reviewer associated repositories](auth-and-access-control-using-tags.md)\.
+Removing a tag from an associated repository can impact access to that associated repository\. Before you remove a tag from an associated repository, make sure to review any IAM policies that might use its key or value to control access to resources such as associated repositories\. For examples of tag\-based access policies, see [Using tags to control access to Amazon CodeGuru Reviewer associated repositories](auth-and-access-control-using-tags.md)\.
 
 **To remove tags from an associated repository**
 
@@ -23,14 +23,14 @@ Removing a tag from an associated repository can impact access to that associate
      --tag-keys key1 key2 key3
    ```
 
-1. If successful, there is no output and there is not an error\. If you want to verify the tags were removed correctly, use the describe\-repository\-association command and use `--association-arn` to specify the ARN of the associated repository\.
+1. If successful, there is no output and no error\. If you want to verify the tags were removed correctly, use the describe\-repository\-association command and use `--association-arn` to specify the ARN of the associated repository\.
 
    ```
    aws codeguru-reviewer describe-repository-association /
      --association-arn arn:aws:codeguru-reviewer:us-west-2:123456789012:association:repository-association-uuid
    ```
 
-   The output is a [https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html) object that includes an array that does not contain the *key*s you removed\. In the following output example, all tags were removed so the tags array is empty\.
+   The output is a [https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html) object that includes an array that does not contain the keys you removed\. In the following output example, all tags were removed so the tags array is empty\.
 
    ```
    {

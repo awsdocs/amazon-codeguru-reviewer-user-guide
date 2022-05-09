@@ -16,10 +16,12 @@ This section helps you troubleshoot common problems you might encounter when wor
 + [How do you access a repository if its owner is no longer available?](#troubleshooting-losing-repository-owner)
 + [Can I use the same AWS CodeStar connection to access repositories in two different accounts?](#troubleshooting-multiple-third-party-accounts)
 + [I'm trying to connect to my third\-party repositories\. What is the difference between an app installation and a connection? Which one can be used to adjust permissions?](#troubleshooting-connections-and-apps)
++ [How do I know if CodeGuru Reviewer used my aws\-codeguru\-reviewer\.yml file in a code review?](#troubleshooting-config-file-used)
++ [Why didn't my costs decrease when I used an aws\-codeguru\-reviewer\.yml file?](#troubleshooting-config-file-costs)
 
 ## Where can I check the status of a repository association?<a name="troubleshooting-status-repo-assoc"></a>
 
-You can check the status of a repository in the CodeGuru console\. In the navigation pane, choose **Reviewer**, and then choose **Repositories **\. The **Repositories** page lists all of the associated repositories and their statuses\. 
+You can check the status of a repository in the CodeGuru console\. In the navigation pane, choose **Reviewer**, and then choose **Repositories**\. The **Repositories** page lists all of the associated repositories and their statuses\. 
 
 You can also use the AWS CLI or the AWS SDK\. First call `ListRepositoryAssociations` to find the association ID, then call `DescribeAssociation`\. 
 
@@ -33,7 +35,7 @@ You can also use the AWS CLI or the AWS SDK\. If you have the code review Amazon
 
 If you are using a source provider that uses AWS CodeStar connections, you can check the status of a connection using the AWS CLI or AWS SDK\. To do this, call `ListConnections` and filter by the type of source provider, such as `Bitbucket`\. 
 
-If you can see your connection displayed there with a status of **Available**, you should be able to return to the CodeGuru console and find your connection\. Try refreshing the display in the console if you haven't already\. Your connection only displays on the CodeGuru console if it has a status of **Available**\. Connections with a status of **Pending** or **Error** are not displayed\. 
+If you can see your connection displayed there with a status of **Available**, you should be able to return to the CodeGuru console and find your connection\. Try refreshing the display in the console if you haven't already\. Your connection only displays on the CodeGuru console if it has a status of **Available**\. The console does not display connections with a status of **Pending** or **Error**\. 
 
 ## My repository is in an associated state\. Why don't I see recommendations?<a name="troubleshooting-status-no-recos"></a>
 
@@ -50,9 +52,9 @@ You can check the status of a repository association in the CodeGuru console\.
 
 1. In the navigation pane, choose **Reviewer**, and then choose **Repositories** to navigate to the **Repositories** page\. This page lists all the associated repositories and their statuses\.
 
-1. Select the association you want to see status details for\.
+1. Select the association for which you want to see status details\.
 
-1. Go to the **Action** list and choose **View repository details**\. A small window opens with information about the repository and the association status\.
+1. From the **Action** list, choose **View repository details**\. A small window opens with information about the repository and the association status\.
 
 You can also use the AWS CLI or the AWS SDK\. First, call `ListRepositoryAssociations` to find the association ID, then call `DescribeAssociation`\. 
 
@@ -60,11 +62,11 @@ When you have fixed the problem, retry associating the repository\.
 
 ## Why did my code review fail?<a name="troubleshooting-status-code-review-failed"></a>
 
-To check the failure status reason of the code review, call the `DescribeCodeReview` API using the AWS CLI or the AWS SDK\. You can also find more information about why the code review failed from the status reason on the console\. To view details about a code review status on the console, navigate to the **Code reviews** page and choose the name of the code review that failed\.\. 
+To check the failure status reason of the code review, call the `DescribeCodeReview` API using the AWS CLI or the AWS SDK\. You can also find more information about why the code review failed from the status reason on the console\. To view details about a code review status on the console, navigate to the **Code reviews** page and choose the name of the code review that failed\. 
 
 Code reviews usually fail for the following reasons: 
-+ Source code access permissions are revoked, and CodeGuru Reviewer was not able to clone the source code to review\. In CodeCommit, this usually happens when the customer removes the “codeguru\-reviewer–enabled” repository tag from the repository\. The easiest way to fix this is to disassociate the repository and then associate the repository again\.
-+ The pull request being reviewed has been closed, or the branch being reviewed was deleted, and CodeGuru Reviewer was not able to clone the source code to review before that occurred\. Wait for CodeGuru Reviewer to finish reviewing your code before deleting the source branch or closing the pull request\.
++ Source code access permissions are revoked, and CodeGuru Reviewer was not able to clone the source code to review\. In CodeCommit, this usually happens when the customer removes the `codeguru-reviewer–enabled` repository tag from the repository\. The easiest way to fix this is to disassociate the repository and then associate the repository again\.
++ The pull request being reviewed has been closed, or the branch being reviewed has been deleted, and CodeGuru Reviewer was not able to clone the source code to review before that occurred\. Wait for CodeGuru Reviewer to finish reviewing your code before deleting the source branch or closing the pull request\.
 
 ## What if I disagree with the recommendation?<a name="troubleshooting-status-reco-disagree"></a>
 
@@ -74,7 +76,7 @@ In CodeCommit, a thumbs\-up or thumbs\-down icon is provided next to the comment
 
 ## How do I suppress a recommendation?<a name="troubleshooting-status-reco-suppress"></a>
 
-CodeGuru Reviewer doesn't currently support suppressing a recommendation\. Reply to the recommendation to indicate that it was not helpful\. 
+You cannot suppress *individual *recommendations, but you can suppress recommendations from CodeGuru Reviewer for specific files or directories in your repository\. To do so, add the files or directories to an `aws-codeguru-reviewer.yml` file\. For more information, see [Suppress recommendations](recommendation-suppression.md)\.
 
 ## The repository status has been associating for more than 5 minutes\. What should I do?<a name="troubleshooting-long-associating-time"></a>
 
@@ -95,3 +97,37 @@ Each connection is associated with one third\-party repository source provider a
 ## I'm trying to connect to my third\-party repositories\. What is the difference between an app installation and a connection? Which one can be used to adjust permissions?<a name="troubleshooting-connections-and-apps"></a>
 
 An *app installation* is a feature that allows AWS CodeStar connections to create connections to a single repository source provider account\. A *connection* is a feature that uses an app installation through AWS CodeStar connections to connect a CodeGuru Reviewer account to a repository source provider account\. Multiple connections can be used for the same app installation if different users need to have different levels of permissions\. 
+
+## How do I know if CodeGuru Reviewer used my aws\-codeguru\-reviewer\.yml file in a code review?<a name="troubleshooting-config-file-used"></a>
+
+CodeGuru Reviewer recognizes the presence of a valid and correctly named `aws-codeguru-reviewer.yml` file in your repository when it creates a full repository analysis code review or an incremental code review\. 
+
+**To confirm that CodeGuru Reviewer used your `aws-codeguru-reviewer.yml` file in a code review**
+
+1. In the CodeGuru Reviewer console, choose **Code reviews**\. This page lists all code reviews performed\.
+
+1. Choose a code review in the list\.
+   + If CodeGuru Reviewer used your file in the code review, then **Success** appears under **Analysis configuration file**\.  
+![\[The Details section of a code review. Success appears under Analysis configuration file.\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/images/code-review-config-file-success.png)
+   + If CodeGuru Reviewer found errors in your file, then **Error** appears under **Analysis configuration file** and a message indicating the errors appears at the top of the page\. 
+
+     Also, **Failed** appears under **Status**, indicating that CodeGuru Reviewer did not perform a code review\.
+
+     Fix your `aws-codeguru-reviewer.yml` file based on the error messages and then initiate a new full repository analysis\. For more information, see [Error handling for the aws\-codeguru\-reviewer\.yml file](recommendation-suppression.md#error-handling-yml)\. ****  
+![\[The Details section of a code review. List of errors in your YAML file appears in top banner.\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/images/code-review-config-file-error.png)
+   + If CodeGuru Reviewer did not recognize your file name or find the file at the root directory of your repository, then **No file detected** appears under **Analysis configuration file**\. Your file must be named `aws-codeguru-reviewer.yml` and must exist in the root directory of your repository\. Otherwise CodeGuru Reviewer cannot recognize that the file exists, use it in code reviews, or return error messages about problems with the file\.
+
+     Confirm the name and location of your file, make any needed changes, and then initiate a new code review\.  
+![\[The Details section of a code review. No file detected appears under Analysis configuration file.\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/images/code-review-no-file-detected.png)
+
+For more information about using an `aws-codeguru-reviewer.yml` file, see [Suppress recommendations](recommendation-suppression.md)\.
+
+## Why didn't my costs decrease when I used an aws\-codeguru\-reviewer\.yml file?<a name="troubleshooting-config-file-costs"></a>
+
+Using an `aws-codeguru-reviewer.yml` file to suppress recommendations from CodeGuru Reviewer might decrease the amount of code that CodeGuru Reviewer analyzes and reduce your costs\. If your costs do not decrease as expected when using an `aws-codeguru-reviewer.yml` file, then check the following possible reasons\.
++ CodeGuru Reviewer didn't recognize your `aws-codeguru-reviewer.yml` and couldn't use it to suppress recommendations during a code review\. Confirm that you named your file correctly and used the correct extension\.
++ Your `aws-codeguru-reviewer.yml` file is not excluding as much content as you initially thought\. Check the files and directories listed under `excludeFiles:` in your `aws-codeguru-reviewer.yml` file\.
++ Your repository increased in size, which offset any reduction from the files and directories listed under `excludeFiles:` in your `aws-codeguru-reviewer.yml` file\.
++ For incremental code reviews, monthly charges are based on the *maximum* number of lines of code reviewed during the month\. For example, if your repository includes 150,000 lines of code and you initiate a full repository analysis code review, but later in the month, you add some files or directories to a `aws-codeguru-reviewer.yml` file in your repository and run a new code review of 50,000 lines of code, your monthly bill reflects the cost for reviewing the *larger* number: 150,000 lines of code\.
+
+For more information about using an `aws-codeguru-reviewer.yml` file, see [Suppress recommendations](recommendation-suppression.md)\.
