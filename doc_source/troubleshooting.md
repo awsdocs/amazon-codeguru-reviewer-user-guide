@@ -41,7 +41,7 @@ If you can see your connection displayed there with a status of **Available**, y
 
 This could happen for the following reasons: 
 + CodeGuru Reviewer doesn't have any recommendations\.
-+ There has not been a pull request or a repository analysis request, so CodeGuru Reviewer has not had a chance to review\.
++ There has not been a pull request or a full repository analysis request, so CodeGuru Reviewer has not had a chance to review\.
 + There was an issue running CodeGuru Reviewer on the source code\. You should [contact AWS Support](https://aws.amazon.com/premiumsupport/?nc2=h_ql_ce_spt)\.
 
 ## Why did my association fail?<a name="troubleshooting-status-repo-assoc-failed"></a>

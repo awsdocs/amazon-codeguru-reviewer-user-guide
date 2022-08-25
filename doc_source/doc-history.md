@@ -2,10 +2,11 @@
 
 The following table describes the major updates and new features for the *Amazon CodeGuru Reviewer User Guide*\. We also update the documentation frequently to address the feedback that you send us\. For notification about updates to this documentation, you can subscribe to an RSS feed\.
 
-**Latest documentation update: **May 2, 2022
+**Latest documentation update: **August 17, 2022
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated topic](#doc-history) | Updated content clarifies the use of S3 repositories\. For more information, see [What languages and repositories can I use with CodeGuru Reviewer?](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/welcome.html#welcome-repositories) | August 23, 2022 | 
 | [New topic](#doc-history) | CodeGuru Reviewer now allows you to suppress recommendations with an analysis configuration file\. For more information, see [Suppress recommendations from CodeGuru Reviewer](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/recommendation-suppression.html)\. | May 2, 2022 | 
 | [Updated topic](#doc-history) | CodeGuru Reviewer now retains forever the OAuth token created after you connect to your GitHub account\. For more information, see [Captured data](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/data-protection.html#data-captured) and [Data retention](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/data-protection.html#data-retention)\. | March 2, 2022 | 
 | [Updated topic](#doc-history) | CodeGuru Reviewer now references the new Amazon CodeGuru Reviewer Detector Library\. The Detector Library lists the detectors that CodeGuru Reviewer uses to analyze your code and provides detailed information about these detectors\. For more information, see [Recommendation types](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/recommendations.html) and the [Amazon CodeGuru Reviewer Detector Library](https://docs.aws.amazon.com/codeguru/detector-library/index.html)\. | January 26, 2022 | 

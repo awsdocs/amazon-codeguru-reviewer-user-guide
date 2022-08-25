@@ -19,8 +19,10 @@ CodeGuru Reviewer is designed to work with Java and Python code repositories in 
 + GitHub Enterprise Cloud
 + GitHub Enterprise Server
 + Amazon S3
+**Note**  
+S3 repositories are only supported through GitHub Actions\. For more information, see [Create code reviews with GitHub Actions](working-with-cicd.md)\.
 
- If you use any of these source providers, you can integrate with CodeGuru Reviewer with just a few steps\. After you associate a repository with CodeGuru Reviewer, you can [interact with recommendations in the CodeGuru Reviewer console](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/give-feedback-from-code-review-details.html)\. For pull request code reviews, you can also [see recommendations directly from inside pull requests](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/provide-feedback.html#provide-feedback-in-pull-requests) in your repository context\.
+If you use any of these source providers, you can integrate with CodeGuru Reviewer with just a few steps\. After you associate a repository with CodeGuru Reviewer, you can [interact with recommendations in the CodeGuru Reviewer console](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/give-feedback-from-code-review-details.html)\. For incremental code reviews, you can also [see recommendations directly from inside pull requests](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/provide-feedback.html#provide-feedback-in-pull-requests) in your repository\.
 
 ## Accessing CodeGuru Reviewer<a name="accessing_reviewer"></a>
 

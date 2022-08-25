@@ -21,9 +21,9 @@ For more information on the difference between incremental code reviews and full
 
 ## Get recommendations using full repository analysis<a name="get-repository-scan"></a>
 
-To get recommendations on all the code in a branch, associate the repository with CodeGuru Reviewer and do the following:
+To get recommendations on all the code in a branch, associate the repository with CodeGuru Reviewer\. CodeGuru Reviewer automatically initiates a full repository analysis\. Later, to initiate a full repository analysis on\-demand, follow these steps:
 
-1. Navigate to the **Code reviews** page in the console\.
+1. Navigate to the **Code reviews** pane in the console\.
 
 1. On the **Full repository analysis** tab, choose **Create full repository analysis**\.  
 ![\[The Code reviews section showing the Create full repository analysis button on the Full repository analysis tab.\]](http://docs.aws.amazon.com/codeguru/latest/reviewer-ug/images/code-reviews-create-full-repo-analysis.png)
@@ -45,9 +45,15 @@ To view the recommendations, navigate to the **Code reviews** page in the consol
 
 ## Get recommendations using incremental code reviews<a name="get-pull-request-scan"></a>
 
-To get recommendations from CodeGuru Reviewer after you associate a repository, use the repository source provider to make an incremental code review\. CodeGuru Reviewer then provides recommendations as incremental code review comments in the source provider to improve your code\. 
+To get recommendations from CodeGuru Reviewer for code changes in an associated repository, referred to as an incremental code review, use the repository source provider to submit a pull request\. CodeGuru Reviewer then provides recommendations to improve your code as comments on the pull request in the source provider\. 
 
-To view the recommendations in the CodeGuru Reviewer console, navigate to the **Code reviews** page in the console and choose the name of the code review to view the detailed code review page\.
+You can also view the recommendations in the CodeGuru Reviewer console\. 
+
+1. Navigate to the **Code reviews** pane in the console\. 
+
+1. On the **Incremental code reviews** tab, choose the name of the code review\. 
+
+   CodeGuru Reviewer then displays the detailed code review page that contains the list of recommendations\.
 
 ## Get recommendations using GitHub Actions<a name="working-with-github-actions"></a>
 
