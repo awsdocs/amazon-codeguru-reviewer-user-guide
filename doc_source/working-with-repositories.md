@@ -11,13 +11,13 @@ Immediately after you create the repository association, its status is **Associa
 When the pull request notifications, source code access, and creation of required permissions are complete, the status changes to **Associated**\. The association is now complete and CodeGuru Reviewer performs its first full scan of the repository\. You can later create incremental code reviews or full repository analysis code reviews to get recommendations\. For more information, see [About full repository analysis and incremental code reviews](repository-analysis-vs-pull-request.md)\.
 
  CodeGuru Reviewer supports associations with repositories from the following source providers: 
-+  AWS CodeCommit 
-+  Bitbucket 
-+  GitHub and GitHub Enterprise Cloud \(These are listed together because you work with them identically using CodeGuru Reviewer\.\) 
-+  GitHub Enterprise Server 
++ AWS CodeCommit
++ Bitbucket
++ GitHub and GitHub Enterprise Cloud \(These are listed together because you work with them identically using CodeGuru Reviewer\.\)
++ GitHub Enterprise Server
 
 **Note**  
- The source code reviewed by CodeGuru Reviewer is not stored\. For more information, see [Captured data in CodeGuru Reviewer](data-protection.md#data-captured)\. 
+The source code reviewed by CodeGuru Reviewer is not stored\. For more information, see [Captured data in CodeGuru Reviewer](data-protection.md#data-captured)\.
 
 **Topics**
 + [Create an AWS CodeCommit repository association in Amazon CodeGuru Reviewer](create-codecommit-association.md)

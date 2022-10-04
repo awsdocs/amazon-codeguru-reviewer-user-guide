@@ -1,8 +1,8 @@
 # Using identity\-based policies for CodeGuru Reviewer<a name="auth-and-access-control-iam-identity-based-access-control"></a>
 
-By default, IAM users and roles don't have permission to create or modify Amazon CodeGuru Reviewer resources\. They also can't perform tasks using the AWS Management Console, AWS CLI, or AWS API\. An IAM administrator must create IAM policies that grant users and roles permission to perform specific API operations on the specified resources they need\. The administrator must then attach those policies to the IAM users or groups that require those permissions\. To learn how to attach policies to an IAM user or group, see [Adding and Removing IAM Identity Permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html) in the *IAM User Guide*\.
+By default, IAM users and roles don't have permission to create or modify Amazon CodeGuru Reviewer resources\. They also can't perform tasks using the AWS Management Console, AWS CLI, or AWS API\. An IAM administrator must create IAM policies that grant users and roles permission to perform specific API operations on the specified resources they need\. The administrator must then attach those policies to the IAM users or groups that require those permissions\. To learn how to attach policies to an IAM user or group, see [Adding and removing IAM identity permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html) in the *IAM User Guide*\.
 
-To learn how to create an IAM identity\-based policy using these example JSON policy documents, see [Creating Policies on the JSON Tab](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html#access_policies_create-json-editor) in the *IAM User Guide*\.
+To learn how to create an IAM identity\-based policy using these example JSON policy documents, see [Creating IAM policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html#access_policies_create-json-editor) in the *IAM User Guide*\.
 
 **Topics**
 + [Policy best practices](#security_iam_service-with-iam-policy-best-practices)
@@ -30,7 +30,7 @@ A user who uses the CodeGuru Reviewer console must have a minimum set of permiss
 + AWS CodeStar connections \(if your source code is in a repository managed by AWS CodeStar connections, such as Bitbucket\)
 + AWS Identity and Access Management \(IAM\)
 
- If your source code is in a GitHub repository, you must have an OAuth token to connect to it\. Associated GitHub repositories are not managed by AWS CodeStar connections\. For more information, see [Git automation with OAuth tokens](https://help.github.com/en/github/extending-github/git-automation-with-oauth-tokens#step-1-get-an-oauth-token) on the GitHub website\. 
+If your source code is in a GitHub repository, you must have an OAuth token to connect to it\. Associated GitHub repositories are not managed by AWS CodeStar connections\. For more information, see [Git automation with OAuth tokens](https://help.github.com/en/github/extending-github/git-automation-with-oauth-tokens#step-1-get-an-oauth-token) on the GitHub website\. 
 
 If you create an IAM policy that is more restrictive than the minimum required permissions, the console won't function as intended\.
 
@@ -51,7 +51,7 @@ The following shows an example of a permissions policy that allows a user to get
 
 ## AWS managed \(predefined\) policies for CodeGuru Reviewer<a name="managed-policies"></a>
 
-AWS addresses many common use cases by providing standalone IAM policies that are created and administered by AWS\. These AWS managed policies grant necessary permissions for common use cases so you can avoid having to investigate what permissions are needed\. For more information, see [AWS Managed Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) in the *IAM User Guide*\.
+AWS addresses many common use cases by providing standalone IAM policies that are created and administered by AWS\. These AWS managed policies grant necessary permissions for common use cases so you can avoid having to investigate what permissions are needed\. For more information, see [AWS managed policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html#aws-managed-policies) in the *IAM User Guide*\.
 
 To create and manage CodeGuru Reviewer service roles, you must also attach the AWS managed policy named `IAMFullAccess`\.
 
@@ -207,7 +207,7 @@ The `AmazonCodeGuruReviewerReadOnlyAccess` policy contains the following stateme
 
 For CodeCommit repository associations, the CodeCommit and CloudWatch permissions in this policy are required\. For associations with repositories that are managed by an AWS CodeStar connection, such as Bitbucket, the AWS CodeStar connections permissions are required\. For code reviews with security analysis, the Amazon S3 permissions are required\.
 
- When you create your first association with a CodeCommit, Amazon S3, or AWS CodeStar connections managed repository, CodeGuru Reviewer adds the `AmazonCodeGuruReviewerServiceRolePolicy` policy to your AWS account\. This policy grants CodeGuru Reviewer access to CodeCommit repositories, AWS CodeStar connections resources in your account that have a `aws:ResourceTag/codeguru-reviewer` tag\. It also grants access to Amazon S3 buckets that have a prefix that begins with `codeguru-reviewer-`\. When you associate a CodeCommit repository, CodeGuru Reviewer adds this tag to the repository\. When you associate an AWS CodeStar connections managed repository, CodeGuru Reviewer adds this tag to the AWS CodeStar connections resource, if it doesn't already exist\. 
+When you create your first association with a CodeCommit, Amazon S3, or AWS CodeStar connections managed repository, CodeGuru Reviewer adds the `AmazonCodeGuruReviewerServiceRolePolicy` policy to your AWS account\. This policy grants CodeGuru Reviewer access to CodeCommit repositories, AWS CodeStar connections resources in your account that have an `aws:ResourceTag/codeguru-reviewer` tag\. It also grants access to Amazon S3 buckets that have a prefix that begins with `codeguru-reviewer-`\. When you associate a CodeCommit repository, CodeGuru Reviewer adds this tag to the repository\. When you associate an AWS CodeStar connections managed repository, CodeGuru Reviewer adds this tag to the AWS CodeStar connections resource, if it doesn't already exist\. 
 
 The `AmazonCodeGuruReviewerServiceRolePolicy` policy contains the following statement\.
 
@@ -303,7 +303,7 @@ The `AmazonCodeGuruReviewerServiceRolePolicy` policy contains the following stat
 
 
 
-View details about updates to AWS managed policies for CodeGuru Reviewer since this service began tracking these changes\. For automatic alerts about changes to this page, subscribe to the RSS feed on the CodeGuru Reviewer [Amazon CodeGuru Reviewer user guide document history](doc-history.md)\.
+View details about updates to AWS managed policies for CodeGuru Reviewer since this service began tracking these changes\. For automatic alerts about changes to this page, subscribe to the RSS feed on the CodeGuru Reviewer [Amazon CodeGuru Reviewer User Guide document history](doc-history.md)\.
 
 
 
@@ -317,7 +317,7 @@ View details about updates to AWS managed policies for CodeGuru Reviewer since t
 
 You can create your own custom IAM policies to allow permissions for CodeGuru Reviewer actions and resources\. You can attach these custom policies to the IAM users, roles, or groups that require those permissions\. You can also create your own custom IAM policies for integration between CodeGuru Reviewer and other AWS services\. 
 
- The following example IAM policies grant permissions for various CodeGuru Reviewer actions\. Use them to limit CodeGuru Reviewer access for your IAM users and roles\. These policies control the ability to perform actions with the CodeGuru Reviewer console, API, AWS SDKs, or the AWS CLI\. 
+The following example IAM policies grant permissions for various CodeGuru Reviewer actions\. Use them to limit CodeGuru Reviewer access for your IAM users and roles\. These policies control the ability to perform actions with the CodeGuru Reviewer console, API, AWS SDKs, or the AWS CLI\. 
 
 **Note**  
 All examples use the US East \(Ohio\) Region \(us\-east\-2\) and contain fictitious account IDs\.

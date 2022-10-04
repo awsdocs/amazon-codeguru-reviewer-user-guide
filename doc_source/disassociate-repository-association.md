@@ -20,12 +20,12 @@ Charges are not incurred for disassociated repositories\.
 1. In the navigation pane, choose **Repositories**\. 
 
 1. Do one of the following:
-   +  Choose the radio button next to the repository you want to disassociate, then choose **Disassociate repository**\. 
-   +  Choose the association ID of the repository you want to disassociate\. On its **Repository** page, choose **Disassociate repository**\. With this option, you can view details about your repository before you disassociate it\. 
+   + Choose the radio button next to the repository you want to disassociate, then choose **Disassociate repository**\. 
+   + Choose the association ID of the repository you want to disassociate\. On its **Repository** page, choose **Disassociate repository**\. With this option, you can view details about your repository before you disassociate it\. 
 
 ## Disassociate a repository in CodeGuru Reviewer \(AWS CLI\)<a name="disassociate-repository-association-cli"></a>
 
- For information about using the AWS CLI with CodeGuru Reviewer, see the [CodeGuru Reviewer section of the AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/reference/codeguru-reviewer/index.html) 
+For information about using the AWS CLI with CodeGuru Reviewer, see the [CodeGuru Reviewer section of the AWS CLI Command Reference](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/codeguru-reviewer/index.html) 
 
 **Disassociate a repository association**
 
@@ -35,7 +35,7 @@ Charges are not incurred for disassociated repositories\.
    aws configure
    ```
 
-    The default Region name must match the AWS Region for the repository in CodeCommit\. 
+   The default Region name must match the AWS Region for the repository in CodeCommit\. 
 
 1. Run the disassociate\-repository command specifying the Amazon Resource Name \(ARN\) of your associated repository\. 
 
@@ -66,7 +66,7 @@ Charges are not incurred for disassociated repositories\.
    aws codeguru-reviewer describe-repository-association --association-arn arn:aws:codeguru-reviewer:us-west-2:123456789012:association:repository-association-uuid
    ```
 
-1.  If successful, the repository association is deleted and the command correctly outputs the following: 
+1. If successful, the repository association is deleted and the command correctly outputs the following: 
 
    ```
    An error occurred (NotFoundException) when calling the DescribeRepositoryAssociation operation: The requested resource arn:aws:codeguru-reviewer:us-west-2:123456789012:association:repository-association-uuid is not found.

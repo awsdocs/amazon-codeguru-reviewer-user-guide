@@ -19,7 +19,7 @@ This section shows you how to create code reviews and get recommendations using 
 
 **To start recommendations using GitHub Actions**
 
-1. Create an Amazon S3 bucket with the prefix **codeguru\-reviewer\-\*** to upload your code and artifacts\. For information on creating a new Amazon S3 bucket, see [Creating a bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html)\.
+1. Create an Amazon S3 bucket with the prefix **codeguru\-reviewer\-\*** to upload your code and artifacts\. For information on creating a new Amazon S3 bucket, see [Creating a bucket](https://docs.aws.amazon.com/amazonS3/latest/userguide/create-bucket-overview.html) in the *Amazon S3 User Guide*\.
 
 1. Sign into your GitHub account to complete the CI/CD integration process\. Your repository must be public or private if it's part of a GitHub organization in order for GitHub actions to work\.
 
@@ -27,7 +27,7 @@ This section shows you how to create code reviews and get recommendations using 
 
    For GitHub hosted runners, you can configure the credentials in GitHub Secrets\. 
 
-   The IAM user or IAM role should have the `AmazonCodeGuruReviewerFullAccess` policy enabled and Amazon S3 Permissions `(s3:PutObject, s3:ListBucket, s3:GetObject)`\. For more details on AWS credentials, see [Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)\. 
+   The IAM user or IAM role should have the `AmazonCodeGuruReviewerFullAccess` policy enabled and Amazon S3 Permissions `(s3:PutObject, s3:ListBucket, s3:GetObject)`\. For more details on AWS credentials, see [Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) in the *AWS Command Line Interface User Guide*\. 
 
 1. Add the CodeGuru Reviewer Action\. The following code snippet provides an example showing how you can enable your workflow, as supported by CodeGuru Reviewer\.
 

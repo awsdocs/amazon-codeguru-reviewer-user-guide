@@ -1,6 +1,6 @@
 # View all repository associations in CodeGuru Reviewer<a name="repository-association-view-all"></a>
 
- You can view all the associated repositories in your AWS Region and your AWS account using the console or the AWS CLI\. 
+You can view all the associated repositories in your AWS Region and your AWS account using the console or the AWS CLI\. 
 
 **Topics**
 + [View all associated repositories in CodeGuru Reviewer \(console\)](#repository-association-view-all-console)
@@ -16,7 +16,7 @@
 
 ## View all repository associations in CodeGuru Reviewer \(AWS CLI\)<a name="repository-association-view-all-cli"></a>
 
- For information about using the AWS CLI with CodeGuru Reviewer, see the [CodeGuru Reviewer section](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/codeguru-reviewer/index.html) and [list\-repository\-associations](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/codeguru-reviewer/list-repository-associations.html) in the *AWS CLI Command Reference*\. 
+For information about using the AWS CLI with CodeGuru Reviewer, see the [CodeGuru Reviewer section](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/codeguru-reviewer/index.html) and [list\-repository\-associations](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/codeguru-reviewer/list-repository-associations.html) in the *AWS CLI Command Reference*\. 
 
 **View all repository associations**
 

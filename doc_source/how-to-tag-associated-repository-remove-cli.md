@@ -13,7 +13,7 @@ Removing a tag from an associated repository can impact access to that associate
    aws configure
    ```
 
-    The default Region name must match the AWS Region for the repository in CodeCommit\. 
+   The default Region name must match the AWS Region for the repository in CodeCommit\. 
 
 1. Run the untag\-resource command\. Use `--resource-arn` to specify the Amazon Resource Name \(ARN\) of the associated repository that contains the tags you want to update or add to\. Use the `--tag-keys` argument to specify the *key* of the tags you want to remove\. The following command removes 3 tags\.
 

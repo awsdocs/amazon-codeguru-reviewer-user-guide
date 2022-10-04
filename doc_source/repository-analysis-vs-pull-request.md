@@ -7,7 +7,7 @@ There are three different kinds of code reviews that CodeGuru Reviewer can do to
 Your first full repository analysis is created for you when you associate your repository\.
 + *Full repository analysis code reviews for CI/CD workflows* scan all the source code in your CI/CD workflow\. For more information, see [Create code reviews with GitHub Actions](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/working-with-cicd.html)\.
 
-You can receive recommendations in code reviews by creating a full repository analysis or submitting a pull request\. After you associate a repository, CodeGuru Reviewer automatically creates a full repository analysis code review, and every pull request in that repository creates an incremental code review\. You can also choose to create subsequent full repository analysis code reviews\. 
+You can receive recommendations in code reviews by creating a full repository analysis or submitting a pull request\. After you associate a repository, CodeGuru Reviewer automatically creates a full repository analysis code review, and every pull request in that repository creates an incremental code review\. You can also choose to create additional full repository analysis code reviews\. 
 
 
 | Type of code review | Is the review automatic after I associate the repository? | Where can I see recommendations? | What code is reviewed? | 

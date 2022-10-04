@@ -13,7 +13,7 @@ The following table lists the current quota in Amazon CodeGuru Reviewer\. This q
 
 ## Tags<a name="limits-tags"></a>
 
- Tag limits apply to tags on CodeGuru Reviewer associated repository resources\. 
+Tag limits apply to tags on CodeGuru Reviewer associated repository resources\. 
 
 
 ****  

@@ -6,7 +6,7 @@ By excluding files or directories, your costs associated with CodeGuru Reviewer 
 
 The following examples describe scenarios in which you might want to use an `aws-codeguru-reviewer.yml` file to exclude files or directories\.
 + Your repository contains directories that should not be included in a code review, such as `test`, `generated`, or `module` directories\. 
-+ Your repository is a large open\-source repository and you do not want files about a feature or product inside the repository to be analyzed\. 
++ Your repository is a large open\-source repository and you don't want files about a feature or product inside the repository to be analyzed\. 
 
 **Topics**
 + [Structure of the aws\-codeguru\-reviewer\.yml file](#structure-configure-file)
@@ -26,7 +26,7 @@ Be sure to use relative paths for files and directories that you add to your `aw
 In addition to being valid YAML and not containing syntax errors, your `aws-codeguru-reviewer.yml` file must meet the following criteria\. If your file does not, then CodeGuru Reviewer returns error messages and does not use your file in any analysis\. For more information, see [Error handling for the aws\-codeguru\-reviewer\.yml file](#error-handling-yml)\.
 + File name: `aws-codeguru-reviewer.yml`
 **Important**  
-You must name the file `aws-codeguru-reviewer` and use the extension `.yml`, not `.yaml`\. If you do not, then CodeGuru Reviewer cannot recognize your file, use it in analyses, or return error messages about your file\. 
+You must name the file `aws-codeguru-reviewer` and use the extension `.yml`, not `.yaml`\. If you don't, then CodeGuru Reviewer cannot recognize your file, use it in analyses, or return error messages about your file\. 
 + Maximum file size: 100 KB
 + Maximum length of each glob expression: 100 characters
 + Maximum number of glob expressions: 100
@@ -107,7 +107,7 @@ excludeFiles:
 
 ## Steps to suppress recommendations<a name="steps-to-suppress-recommendations"></a>
 
-You can add an `aws-codeguru-reviewer.yml` file to a repository either *before* or *after* you associate a repository\. For more information about associating a repository, see [ Working with repository associations ](working-with-repositories.md)\.
+You can add an `aws-codeguru-reviewer.yml` file to a repository either *before* or *after* you associate a repository\. For more information about associating a repository, see [Working with repository associations ](working-with-repositories.md)\.
 
 **To suppress recommendations**
 
@@ -115,7 +115,7 @@ You can add an `aws-codeguru-reviewer.yml` file to a repository either *before* 
 
 1. Add the `aws-codeguru-reviewer.yml` file to the root directory of the repository that you want CodeGuru Reviewer to analyze\.
 
-1. For new repositories, associate the repository\. After you associate the repository, CodeGuru Reviewer automatically initiates a full repository analysis code review\. For more information, see [ Working with repository associations ](working-with-repositories.md)\.
+1. For new repositories, associate the repository\. After you associate the repository, CodeGuru Reviewer automatically initiates a full repository analysis code review\. For more information, see [Working with repository associations ](working-with-repositories.md)\.
 
 1. For repositories that have already been associated, initiate either a full repository analysis code review or an incremental code review\. For more information, see [ Create code reviews](create-code-reviews.md)\.
 
@@ -141,7 +141,7 @@ You can add an `aws-codeguru-reviewer.yml` file to a repository either *before* 
 
 ## Cost impact of suppressing recommendations<a name="costs-control-code-analyzed"></a>
 
-You are only charged for the lines of code that CodeGuru Reviewer analyzes\. You are not charged for the lines of code in files or directories that you exclude in your `aws-codeguru-reviewer.yml` file\. For more information, see [Amazon CodeGuru pricing](https://aws.amazon.com/codeguru/pricing/)\.
+You are only charged for the lines of code that CodeGuru Reviewer analyzes\. You are not charged for the lines of code in files or directories that you exclude in your `aws-codeguru-reviewer.yml` file\. For more information, see [Amazon CodeGuru pricing](http://aws.amazon.com/codeguru/pricing/)\.
 
 If you receive an error message about the `aws-codeguru-reviewer.yml` file, CodeGuru Reviewer did not analyze your repository and you are not charged\. For more information about error messages, see [Error handling for the aws\-codeguru\-reviewer\.yml file](#error-handling-yml)\.
 

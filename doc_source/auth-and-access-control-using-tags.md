@@ -1,13 +1,13 @@
 # Using tags to control access to Amazon CodeGuru Reviewer associated repositories<a name="auth-and-access-control-using-tags"></a>
 
-Conditions in IAM policy statements are part of the syntax that you can use to specify permissions to CodeGuru Reviewer associated repository\-based actions\. You can create a policy that allows or denies actions on associated repositories based on the tags associated with those associated repositories, and then apply those policies to the IAM groups you configure for managing IAM users\. For information about applying tags to an associated repository using the console or AWS CLI, see [Add a tag to a CodeGuru Reviewer associated repository](how-to-tag-associated-repositories-add.md)\. For information about applying tags using the CodeGuru Reviewer SDK, see [AssociateRepository](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_AssociateRepository.html#API_AssociateRepository_RequestSyntax) in the *CodeGuru Reviewer API Reference*\. For information about using tags to control access to AWS resources, see [Controlling Access to AWS Resources Using Resource Tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html) in the *IAM User Guide*\.
+Conditions in IAM policy statements are part of the syntax that you can use to specify permissions to CodeGuru Reviewer associated repository\-based actions\. You can create a policy that allows or denies actions on associated repositories based on the tags associated with those associated repositories, and then apply those policies to the IAM groups you configure for managing IAM users\. For information about applying tags to an associated repository using the console or AWS CLI, see [Add a tag to a CodeGuru Reviewer associated repository](how-to-tag-associated-repositories-add.md)\. For information about applying tags using the CodeGuru Reviewer SDK, see [AssociateRepository](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_AssociateRepository.html#API_AssociateRepository_RequestSyntax) in the *Amazon CodeGuru Reviewer API Reference*\. For information about using tags to control access to AWS resources, see [Controlling Access to AWS Resources Using Resource Tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html) in the *IAM User Guide*\.
 
- You can directly use tags on an associated repository to affect permissions on the following CodeGuru Reviewer API operations: 
+You can directly use tags on an associated repository to affect permissions on the following CodeGuru Reviewer API operations: 
 +  `AssociateRepository` 
 +  `DescribeRepositoryAssociation` 
 +  `DisassociateRepositoryAssociation` 
 
- You can use tags on an associated repository to indirectly affect permissions on a code review that belongs to the associated repository\. Use tags on an associated repository to affect permissions on the following CodeGuru Reviewer API operations that are related to code reviews: 
+You can use tags on an associated repository to indirectly affect permissions on a code review that belongs to the associated repository\. Use tags on an associated repository to affect permissions on the following CodeGuru Reviewer API operations that are related to code reviews: 
 +  `CreateCodeReview` 
 +  `ListRecommendations` 
 +  `DescribeCodeReview` 

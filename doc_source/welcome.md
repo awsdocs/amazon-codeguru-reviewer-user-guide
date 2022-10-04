@@ -28,8 +28,6 @@ If you use any of these source providers, you can integrate with CodeGuru Review
 
 You can access CodeGuru Reviewer using any of the following methods:
 + **Amazon CodeGuru Reviewer console** – [https://console\.aws\.amazon\.com/codeguru/reviewer/](https://console.aws.amazon.com/codeguru/reviewer/)
-+ **AWS CLI** – For more information, see [Getting Set Up with the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html) in the *AWS Command Line Interface User Guide*\.
++ **AWS CLI** – For more information, see [Getting started with the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) in the *AWS Command Line Interface User Guide*\.
 + **CodeGuru Reviewer API** – For more information, see the [Amazon CodeGuru Reviewer API Reference](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/Welcome.html)\.
-+ **AWS SDKs** – For more information, see [Tools for Amazon Web Services](http://aws.amazon.com/tools)\.
-
-## <a name="welcome-next-steps"></a>
++ **AWS SDKs** – For more information, see [Tools to Build on AWS](http://aws.amazon.com/developer/tools)\.

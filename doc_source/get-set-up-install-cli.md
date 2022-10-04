@@ -9,11 +9,11 @@ If you have an older version of the AWS CLI installed, we recommend you upgrade 
 
 **To install and configure the AWS CLI**
 
-1. Follow the instructions in [Installing the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) to install or upgrade the AWS CLI\.
+1. Follow the instructions in [Getting started with the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) to install or upgrade the AWS CLI\.
 
-1. To configure the AWS CLI, see [Configuring the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) and [Managing Access Keys for IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingCredentials.html)\. 
+1. To configure the AWS CLI, see [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) in the *AWS Command Line Interface User Guide* and [Managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) in the *IAM User Guide*\. 
 **Important**  
-When you configure the AWS CLI, you are prompted to specify an AWS Region\. Choose one of the supported Regions listed in [Region and Endpoints](https://docs.aws.amazon.com/general/latest/gr/codeguru-reviewer.html) in the *AWS General Reference*\.
+When you configure the AWS CLI, you are prompted to specify an AWS Region\. Choose one of the supported Regions listed in [Amazon CodeGuru Reviewer endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/codeguru-reviewer.html) in the *AWS General Reference*\.
 
 1. To verify the installation or upgrade, call the following command from the AWS CLI\.
 

@@ -83,5 +83,5 @@ sponsored by Amazon.
    + [Infrastructure security in CodeGuru Reviewer](infrastructure-security.md)
 + [Quotas for CodeGuru Reviewer](quotas.md)
 + [Troubleshooting](troubleshooting.md)
-+ [Amazon CodeGuru Reviewer user guide document history](doc-history.md)
++ [Amazon CodeGuru Reviewer User Guide document history](doc-history.md)
 + [AWS glossary](glossary.md)

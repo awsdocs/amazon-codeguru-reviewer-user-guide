@@ -6,7 +6,7 @@ You can encrypt an associated repository with a KMS key only when you create it\
 
 The encryption key \(either an AWS owned and managed key, or a KMS key you create\) encrypts the associated repository and all of its code reviews\. Each code review is a child of the associated repository that contains the reviewed code\.
 
-If you encrypt an associated repository with a KMS key, then revoke access to that key by disabling it or removing CodeGuru Reviewer's grant to AWS KMS using the AWS Identity and Access Management AWS CLI or SDK, the following occurs:
+If you encrypt an associated repository with a KMS key, then revoke access to that key by disabling it or removing CodeGuru Reviewer access to AWS KMS using the AWS Identity and Access Management AWS CLI or SDK, the following occurs:
 + Recommendations related to the associated repository become unavailable\.
 + You cannot successfully review code in the associated repository\. You can schedule a code review, but the code review fails\.
 
@@ -21,7 +21,7 @@ Creation of an AWS KMS key results in charges to your AWS account\. For more inf
 
 ## Encrypt an associated repository using an AWS KMS key<a name="encrypt-repository-association-how-to-use-cmk"></a>
 
-You can use the Amazon CodeGuru Reviewer console to specify an AWS Key Management Service key \(KMS key\) to encrypt your associated repository\. If you do not do this, your associated repository is encrypted by default using a key that is owned and managed by AWS\.
+You can use the Amazon CodeGuru Reviewer console to specify an AWS Key Management Service key \(KMS key\) to encrypt your associated repository\. If you don't do this, your associated repository is encrypted by default using a key that is owned and managed by AWS\.
 
 **Encrypt an associated repository using a KMS key**
 
@@ -36,18 +36,18 @@ You can use the Amazon CodeGuru Reviewer console to specify an AWS Key Managemen
 1. Select **Customize encryption settings \(advanced\)**\.
 
 1. Do one of the following: 
-   + If you already have a KMS key that you manage, enter its Amazon Resource Name \(ARN\)\. For information about finding the ARN of your key using the console, see [Finding the key ID and ARN](https://docs.aws.amazon.com/kms/latest/developerguide/find-cmk-id-arn.html) in the *AWS Key Management Service Developer Guide*\.
+   + If you already have a KMS key that you manage, enter its Amazon Resource Name \(ARN\)\. For information about finding the ARN of your key using the console, see [Finding the key ID and key ARN](https://docs.aws.amazon.com/kms/latest/developerguide/find-cmk-id-arn.html) in the *AWS Key Management Service Developer Guide*\.
    + If you want to create a KMS key, choose **Create an AWS KMS key** and follow the steps in the AWS KMS console\. For more information, see [Creating keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.
 
 1. Complete the rest of the steps to create your repository association\.
 
 ## Update how a repository association is encrypted<a name="encrypt-repository-association-how-to-change-cmk"></a>
 
-If you want to update how your associated repository is encrypted, you must disassociate it, then recreate it\. When you recreate the associated repository, specify the AWS Key Management Service key \(KMS key\) you want to use\. If you do not specify a KMS key, then your data is encrypted by a key that is managed by AWS\.
+If you want to update how your associated repository is encrypted, you must disassociate it, then recreate it\. When you recreate the associated repository, specify the AWS Key Management Service key \(KMS key\) you want to use\. If you don't specify a KMS key, then your data is encrypted by a key that is managed by AWS\.
 
 **Change how an associated repository is encrypted**
 
-1. Disassociate your associated repository by following the steps in [Disassociate a repository in CodeGuru Reviewer \(console\) ](disassociate-repository-association.md#disassociate-repository-association-console)\.
+1. Disassociate your associated repository by following the steps in [Disassociate a repository in CodeGuru Reviewer \(console\)](disassociate-repository-association.md#disassociate-repository-association-console)\.
 
 1. Follow the steps in one of the following topics to create an association with your repository type\. Specify the KMS key you want to use or don't specify any KMS key if you want to encrypt your data using an AWS owned and managed key\. 
    +  [Create an AWS CodeCommit repository association \(console\)](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/create-codecommit-association.html#create-codecommit-association-console) 

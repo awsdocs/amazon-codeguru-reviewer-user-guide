@@ -8,7 +8,7 @@ You can use the CodeGuru Reviewer console to update, add, or remove the tags ass
 
 1. In the navigation pane, choose **Repositories**\.
 
-1.  Do one of the following: 
+1. Do one of the following: 
    + Choose the association ID of the associated repository where you want to view tags, then choose **Manage tags**\.
    + Choose the radio button next to the associated repository where you want to view tags, then choose **Manage tags**\.
 

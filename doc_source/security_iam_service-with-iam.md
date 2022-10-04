@@ -3,7 +3,7 @@
 Every AWS resource is owned by an AWS account, and permissions to create or access a resource are governed by permissions policies\. An account administrator can attach permissions policies to IAM identities \(that is, users, groups, and roles\)\. 
 
 **Note**  
-An account administrator \(or administrator user\) is a user with administrator privileges\. For more information, see [IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) in the *IAM User Guide*\.
+An account administrator \(or administrator user\) is a user with administrator privileges\. For more information, see [Security best practices in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) in the *IAM User Guide*\.
 
 When you grant permissions, you decide who is getting the permissions, the resources they can access, and the actions that can be performed on those resources\.
 
@@ -58,7 +58,7 @@ The AWS account owns the resources that are created in it, regardless of who cre
 A permissions policy describes who has access to which resources\. 
 
 **Note**  
-This section discusses the use of IAM in CodeGuru Reviewer\. It doesn't provide detailed information about the IAM service\. For complete IAM documentation, see [What Is IAM?](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) in the *IAM User Guide*\. For information about IAM policy syntax and descriptions, see [IAM JSON Policy Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html) in the *IAM User Guide*\.
+This section discusses the use of IAM in CodeGuru Reviewer\. It doesn't provide detailed information about the IAM service\. For complete IAM documentation, see [What is IAM?](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) in the *IAM User Guide*\. For information about IAM policy syntax and descriptions, see [IAM JSON policy reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html) in the *IAM User Guide*\.
 
 Policies attached to an IAM identity are referred to as* identity\-based policies* \(IAM policies\)\. Policies attached to a resource are referred to as *resource\-based policies*\. CodeGuru Reviewer supports identity\-based \(IAM policies\) only\.
 
@@ -80,6 +80,6 @@ The following are the basic policy elements:
 + **Effect** – You specify the effect, either allow or deny, when the user requests the action\. If you don't explicitly grant access to \(allow\) a resource, access is implicitly denied\. You can also explicitly deny access to a resource\. You might do this to make sure that a user cannot access a resource, even if a different policy grants access\.
 + **Principal** – In identity\-based policies \(IAM policies\), the user the policy is attached to is the implicit principal\. For resource\-based policies, you specify the user, account, service, or other entity that you want to receive permissions\.
 
-To learn more about IAM policy syntax and descriptions, see [AWS IAM Policy Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html) in the *IAM User Guide*\.
+To learn more about IAM policy syntax and descriptions, see [IAM JSON policy reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html) in the *IAM User Guide*\.
 
 For a table showing all of the CodeGuru Reviewer API actions and the resources they apply to, see [Amazon CodeGuru Reviewer permissions reference](auth-and-access-control-permissions-reference.md)\.

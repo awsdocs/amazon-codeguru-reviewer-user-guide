@@ -28,7 +28,7 @@ You can create a Bitbucket repository association using the Amazon CodeGuru Revi
    1. Select **Customize encryption settings \(advanced\)**\.
 
    1. Do one of the following: 
-      + If you already have a KMS key that you manage, enter its Amazon Resource Name \(ARN\)\. For information about finding the ARN of your key using the console, see [Finding the key ID and ARN](https://docs.aws.amazon.com/kms/latest/developerguide/find-cmk-id-arn.html) in the *AWS Key Management Service Developer Guide*\.
+      + If you already have a KMS key that you manage, enter its Amazon Resource Name \(ARN\)\. For information about finding the ARN of your key using the console, see [Finding the key ID and key ARN](https://docs.aws.amazon.com/kms/latest/developerguide/find-cmk-id-arn.html) in the *AWS Key Management Service Developer Guide*\.
       + If you want to create a KMS key, choose **Create an AWS KMS key** and follow the steps in the AWS KMS console\. For more information, see [Creating keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.
 
 1. In **Run a repository analysis**, specify information for your associated repository's first full scan\. This scan generates your repository's initial code review\. For more information, see [Get recommendations using full repository analysis](create-code-reviews.md#get-repository-scan)\.
@@ -52,7 +52,7 @@ You can create a Bitbucket repository association using the Amazon CodeGuru Revi
 
 ## Create a Bitbucket repository association \(AWS CLI\)<a name="create-bitbucket-association-cli"></a>
 
- For information about using the AWS CLI with CodeGuru Reviewer, see the [CodeGuru Reviewer section of the AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/reference/codeguru-reviewer/index.html) 
+For information about using the AWS CLI with CodeGuru Reviewer, see the [CodeGuru Reviewer section of the AWS CLI Command Reference](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/codeguru-reviewer/index.html) 
 
 **To create a Bitbucket repository association**
 
@@ -62,7 +62,7 @@ You can create a Bitbucket repository association using the Amazon CodeGuru Revi
    aws configure
    ```
 
-    The default Region name must match the AWS Region for the repository in CodeCommit\. 
+   The default Region name must match the AWS Region for the repository in CodeCommit\. 
 
 1. Run the associate\-repository command specifying the owner \(or user name\) of your Bitbucket account, the name of your repository, and the Amazon Resource Name \(ARN\) of your connection\. 
 
@@ -96,7 +96,7 @@ You can create a Bitbucket repository association using the Amazon CodeGuru Revi
    aws codeguru-reviewer describe-repository-association --association-arn arn:aws:codeguru-reviewer:us-west-2:123456789012:association:repository-association-uuid
    ```
 
-1.  If successful, this command outputs a [https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html) object which shows its status\. 
+1. If successful, this command outputs a [https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html) object which shows its status\. 
 
    ```
    {
