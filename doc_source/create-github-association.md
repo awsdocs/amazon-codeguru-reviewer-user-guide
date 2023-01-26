@@ -7,7 +7,7 @@ We recommend creating a new GitHub user \(for example, *MyCodeGuruUser*\) and us
 
 **To create a GitHub repository association**
 
-1. Open the Amazon CodeGuru Reviewer console at [https://console\.aws\.amazon\.com/codeguru/reviewer/home](https://console.aws.amazon.com/codeguru/reviewer/home)\.
+1. Open the Amazon CodeGuru console at [https://console\.aws\.amazon\.com/codeguru/home](https://console.aws.amazon.com/codeguru/home)\.
 
 1. In the navigation pane, choose **Repositories**\. 
 
