@@ -23,6 +23,7 @@ The secrets detector searches for hardcoded passwords, database connection strin
 The secrets detector finds unprotected secrets the following file types with a maximum file size of 100kb\.
 + Config files \(\*\.config, \*\.cfg, \*\.conf, \*\.cnf, \*\.cf\)
 + Environment files \(\*\.env\)
++ HTML files \(\*\.html\)
 + Initialization files \(\*\.ini\)
 + Java files \(\*\.java\)
 + JSON files \(\*\.json\)
